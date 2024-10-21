@@ -51,6 +51,11 @@ nav ul {
     margin-right: 45px;
 }
 
+nav ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
 nav ul li a {
     font-family: "Luckiest Guy", sans-serif;
     font-size: 26px;
@@ -58,6 +63,21 @@ nav ul li a {
     font-weight: 400;
     text-decoration: none;
     color: #000000;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s ease 0s;
+}
+
+nav ul li a:hover {
+    font-family: "Luckiest Guy", sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: #FFFFFF;
+    -webkit-text-stroke: 3px var(--yellow);
+    text-transform: uppercase;
     display: flex;
     flex-direction: row;
 }

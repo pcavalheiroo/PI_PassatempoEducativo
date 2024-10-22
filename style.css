@@ -31,14 +31,13 @@ nav {
     height: 160px;
     place-items: center;
     align-items: center;
-    position: fixed;
-    width: 80%;
-    top: 80px;
+    width: 100%;
+    margin-top: 80px;
     z-index: 100;
 }
 
 nav .logo {
-    margin-left: 45px;
+    margin-left: 60px;
     height: auto;
 }
 
@@ -49,11 +48,15 @@ nav ul {
     list-style: none;
     margin-left: 50px;
     margin-right: 45px;
+    justify-content: center;
+    width: 100%;
 }
 
 nav ul li {
     display: inline-block;
     padding: 0px 20px;
+    flex-grow: 1;
+    text-align: center;
 }
 
 nav ul li a {
@@ -76,7 +79,8 @@ nav ul li a:hover {
     font-weight: 400;
     text-decoration: none;
     color: #FFFFFF;
-    -webkit-text-stroke: 3px var(--yellow);
+    -webkit-text-stroke: 6px var(--yellow);
+    paint-order: stroke fill;
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
@@ -85,4 +89,48 @@ nav ul li a:hover {
 .arrow-icon {
     margin-left: 8px;
     vertical-align: middle;
+}
+
+/* Content */
+
+.passatempo-eventos {
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2px);
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.passatempo-eventos .left h1 {
+    font-family: "Luckiest Guy";
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.passatempo-eventos .left p {
+    font-family: Ubuntu;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.passatempo-eventos .left {
+    width: 40%;
+}
+
+.passatempo-eventos .right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }

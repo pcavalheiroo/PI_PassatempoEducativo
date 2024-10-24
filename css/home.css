@@ -41,7 +41,6 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding: 0px 20px;
   flex-grow: 1;
   text-align: center;
 }
@@ -127,12 +126,15 @@ nav ul li a:hover {
   object-fit: cover;
   padding-right: 70px;
   z-index: 10;
+  left: 12%;
+  top: 20%;
+
 }
 
 .passatempo-eventos .right .yellow_spot {
   position: absolute;
-  width: 130%;
-  left: -18%;
-  top: -120px;
-  z-index: 1;
+  width: 110%;
+  left: 5%;
+  top: 10%;
+  z-index: 0;
 }

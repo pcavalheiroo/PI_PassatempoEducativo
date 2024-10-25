@@ -13,14 +13,13 @@
 
 body {
     margin: 0;
-    font-family: "Luckiest Guy", sans-serif;
     background-image: url(/PI_PassatempoEducativo/assets/background.png);
     background-size: cover;
   }
   
   .wrapper {
     max-width: 80%;
-    margin: 0 auto;
+    margin: auto;
   }
   
   nav {
@@ -28,7 +27,7 @@ body {
     justify-content: center;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.80);
-    height: 160px;
+    height: 170px;
     place-items: center;
     align-items: center;
     width: 100%;
@@ -54,7 +53,6 @@ body {
   
   nav ul li {
     display: inline-block;
-    padding: 0px 20px;
     flex-grow: 1;
     text-align: center;
   }
@@ -100,64 +98,191 @@ body {
     display: flex;
     margin-top: 85px;
     height: 138px;
+    font-family: LUCKIEST GUY;
   }
   .title h1{
     text-align: center;
     font-size: 85px;
-    font-style: normal;
     font-weight: 400;
   }
   
-  .passatempo-eventos {
+  .passatempo-recreacao {
     display: flex;
-    height: auto;
+    height: 450px;
     width: 100%;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.80);
     margin-top: 100px;
   }
+
+  .passatempo-recreacao .left{
+    width: 50%;
+    padding-left: 3%;
+  }
   
-  .passatempo-eventos .left h1 {
+  .passatempo-recreacao .left h1 {
     font-family: "Luckiest Guy";
     font-size: 85px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
     text-transform: uppercase;
-    margin-top: auto;
+    /* margin-top: auto; */
     margin-bottom: 30px;
-    padding: 40px;
-    width: 303px;
-    height: 60px;
+    /* padding: 40px; */
+    width: 100%;
   }
   
-  .passatempo-eventos .left p {
+  .passatempo-recreacao .left p {
     font-family: Ubuntu;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    padding: 40px;
-    width: 450px;
-    height: 222px;
+    /* padding: 0px 40px 40px 40px; */
+    width: 100%;
   }
-  
-  .passatempo-eventos .left {
+  .passatempo-recreacao .left{
     width: 40%;
   }
   
-  .passatempo-eventos .right {
+
+  .passatempo-recreacao .right {
     position: relative;
+    width: 50%;
   }
   
-    .right img {
+  .passatempo-recreacao .right .yellow_spot img {
     position: absolute;
-    width: 732px;
-    height: 650px;  
-    object-fit: cover;
-    padding-right: 70px;
+    width: 130%;
+    right: -15%;
+    margin-top: -40%;
     z-index: 0;
   }
+
+  .passatempo-recreacao .right .img-recreacao img{
+    position: relative;
+    width: 90%;
+    object-fit: cover;
+    padding-right: 70px;
+    right: 0%;
+    margin-top: 7%;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 455px;
+    width: 100%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.80);
+    margin-top: 100px;
+  }
+
+  .container .right{
+    width: 50%;
+  }
+  .container .right h1{
+    font-family: "Luckiest Guy";
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    width: 100%;    
+  }
   
+  .container .right p{
+    font-family: Ubuntu;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    width: 90%;
+  }
+  
+  
+  .container .left{
+    width: 50%;
+  }
+  
+  .container .left .img-aniversario img{
+    position: relative;
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .container .left .pink-spot img{
+    position: absolute;
+    width: 50%;
+    z-index: 0;
+    left: 4%;
+    top: 134%;
+  }
+
+.passatempo-ferias{
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.80);
+  margin-top: 100px;
+}
+.passatempo-ferias .center{
+  padding: 20px;
+}
+
+.passatempo-ferias .center p {
+  width: 100%;
+  text-align: left;
+  font-family: Ubuntu;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.passatempo-ferias .center h1{
+  text-align: center;
+  font-family: "Luckiest Guy";
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.80);
+  margin-top: 100px;
+  height: 180px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 35px;
+}
+
+.social-media a img {
+  width: 100%;
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}

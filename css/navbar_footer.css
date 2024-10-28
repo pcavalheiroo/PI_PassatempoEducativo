@@ -23,6 +23,8 @@ body {
   margin: 0 auto;
 }
 
+/* Navbar */
+
 nav {
   display: flex;
   justify-content: flex-start;
@@ -34,6 +36,9 @@ nav {
   width: 100%;
   margin-top: 80px;
   z-index: 100;
+  position: relative;
+  flex-wrap: nowrap;
+  padding: 0 20px;
 }
 
 nav .logo {
@@ -41,17 +46,22 @@ nav .logo {
   height: auto;
 }
 
+nav .logo_2 {
+  display: none;
+}
+
 nav ul {
   display: flex;
   align-items: center;
-  gap: 1em;
   list-style: none;
   margin-left: 20px;
   margin-right: 50px;
   justify-content: center;
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   text-align: center;
+  margin: 0 auto;
+  flex-shrink: 1;
 }
 
 nav ul li {
@@ -59,11 +69,13 @@ nav ul li {
   padding: 0px 20px;
   flex-grow: 1;
   text-align: center;
+  justify-content: center;
+  padding: 0 10px;
 }
 
 nav ul li a {
   font-family: "Luckiest Guy", sans-serif;
-  font-size: 26px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
@@ -95,6 +107,21 @@ nav ul li a:hover {
   vertical-align: middle;
 }
 
+/* Menu */
+.menu {
+  display: none;
+  /* Oculto por padrão */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Footer */
+
 footer {
   background: rgba(255, 255, 255, 0.80);
   margin-top: 100px;
@@ -110,7 +137,8 @@ footer {
 }
 
 .social-media a img {
-  width: 110%;
+  width: 100%px;
+  transition: width 0.3s ease;
 }
 
 footer p {
@@ -132,8 +160,63 @@ footer p {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1250px) {
   nav {
+    background: none;
+  }
+
+  nav ul {
     display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav ul li a {
+    font-size: 20px; /* Reduz mais o tamanho do texto */
+  }
+
+
+  .menu {
+    display: flex;
+    /* Mostrar o ícone hamburger */
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .social-media a img {
+    width: 80%;
+  }
+
+  nav .logo img {
+    display: none;
+  }
+
+  nav .logo_2 {
+    display: flex;
+  }
+
+  nav .logo_2 img {
+    width: 40%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  nav .logo {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .menu img {
+    width: 80%;
   }
 }

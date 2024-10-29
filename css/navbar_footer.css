@@ -128,27 +128,27 @@ nav ul li a:hover {
 footer {
   background: rgba(255, 255, 255, 0.80);
   margin-top: 100px;
-  height: 160px;
+  height: 165px;
 }
 
 .social-media {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
   padding-top: 35px;
 }
 
 .social-media a img {
-  width: 100%px;
+  width: 80%;
   transition: width 0.3s ease;
 }
 
-footer .copyright {
+.copyright {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 15px;
+  padding-top: 20px;
   color: #000;
   font-family: Roboto;
   font-size: 14px;
@@ -180,7 +180,11 @@ footer .copyright {
 
   footer {
     margin-top: 50px;
-    height: 150px;
+    height: 140px;
+  }
+
+  .copyright {
+    margin-top: 5px;
   }
 }
 
@@ -198,9 +202,18 @@ footer .copyright {
     height: 130px;
   }
 
-  .social-media img {
+  .social-media {
+    gap: 20px;
+  }
+
+  .social-media a img {
     width: 70%;
     align-items: center;
+  }
+
+  footer .copyright {
+    font-size: 12px;
+    margin-top: 5px;
   }
 }
 
@@ -239,18 +252,19 @@ footer .copyright {
   nav .logo_2 img {
     width: 25%;
   }
+  
+  footer {
+    height: 110px;
+    margin-top: 30px;
+  }
 
   .social-media {
-    gap: 20px;
+    gap: 10px;
+    padding-top: 20px;
   }
 
   .social-media a img {
     width: 60%;
-  }
-
-  footer {
-    height: 100%;
-    margin-top: 30px;
   }
 
   footer .copyright {
@@ -263,7 +277,21 @@ footer .copyright {
     width: 80%;
   }
 
+  .social-media {
+    gap: 1px;
+    padding-top: 20px;
+  }
+
+  .social-media a img {
+    width: 50%;
+  }
+
+  footer {
+    height: 90px;
+  }
+
   footer .copyright {
     font-size: 10px;
+    margin-top: 1px;
   }
 }

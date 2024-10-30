@@ -1,4 +1,4 @@
-/* Título */
+/* Cabeçalho */
 
 .title {
   display: flex;
@@ -11,10 +11,56 @@
 .title h1 {
   font-family: "Luckiest Guy";
   font-size: 85px;
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-self: center;
   width: 100%;
+}
+
+.title_con {
+  display: flex;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #FFBD57;
+  height: 140px;
+  margin-top: 70px;
+}
+
+.title_con h1 {
+  font-family: "Luckiest Guy";
+  font-size: 85px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+
+.subtitle {
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0px 0px 20px 20px;
+  background: rgba(255, 255, 255, 0.80);
+  margin-top: 0;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.subtitle p {
+  font-family: Ubuntu;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* Conteúdo Tipo 1 */
@@ -90,7 +136,7 @@
   justify-content: space-between;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 100px;
+  margin-top: 70px;
   padding: 40px;
   flex-wrap: wrap;
 }
@@ -145,11 +191,58 @@
   margin-right: 20px;
 }
 
+/* Conteúdo Tipo 3 */
+
+.box_3 {
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.80);
+  margin-top: 70px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.box_3 h1 {
+  font-family: "Luckiest Guy";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+
+.box_3 p {
+  font-family: Ubuntu;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  margin-bottom: auto;
+}
+
 /* Media Query */
 
 @media (max-width: 1250px) {
   .title {
     margin-top: 50px;
+  }
+
+  .title h1 {
+    font-size: 75px;
   }
 
   .box_1 {
@@ -158,13 +251,13 @@
     padding: 20px;
     margin-top: 50px;
   }
-  
+
   .box_1 .left,
   .box_1 .right {
     width: 100%;
     text-align: center;
   }
-  
+
   .box_1 .right .image {
     padding-right: 0;
     max-width: 80%;
@@ -186,23 +279,26 @@
     margin: 0 auto;
     text-align: center;
   }
+
   .box_2 {
     flex-direction: column-reverse;
     align-items: center;
     padding: 20px;
     margin-top: 50px;
   }
-  
+
   .box_2 .left,
   .box_2 .right {
     width: 100%;
     text-align: center;
+    right: 9px
   }
-  
+
   .box_2 .left .image {
     padding-right: 0;
     max-width: 80%;
-    margin: 40px 20px;
+    margin: 40px auto;
+    width: 100%;
   }
 
   .box_2 .left .asset {
@@ -220,9 +316,25 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  .box_2 {
+    margin-top: 50px;
+  }
+
+  .box_3 h1 {
+    font-size: 35px;
+  }
+
+  .box_3 p {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 992px) {
+  .title h1 {
+    font-size: 65px;
+  }
+
   .box_1 {
     margin-top: 50px;
   }
@@ -234,6 +346,7 @@
   .box_1 .left p {
     font-size: 16px;
   }
+
   .box_2 {
     margin-top: 50px;
   }
@@ -245,11 +358,28 @@
   .box_2 .right p {
     font-size: 16px;
   }
+
+  .box_3 {
+    margin-top: 50px;
+  }
+
+  .box_3 h1 {
+    font-size: 28px;
+  }
+
+  .box_3 p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
   .title {
     margin-top: 30px;
+    height: 100px;
+  }
+
+  .title h1 {
+    font-size: 50px;
   }
 
   .box_1 {
@@ -267,6 +397,7 @@
   .box_1 .right .image {
     max-width: 70%;
   }
+
   .box_2 {
     margin-top: 30px;
   }
@@ -281,6 +412,22 @@
 
   .box_2 .left .image {
     max-width: 70%;
+    display: flex;
+    align-self: center;
+    margin: 40px auto;
+
+  }
+
+  .box_3 {
+    margin-top: 30px;
+  }
+
+  .box_3 h1 {
+    font-size: 24px;
+  }
+
+  .box_3 p {
+    font-size: 14px;
   }
 }
 
@@ -296,6 +443,7 @@
   .box_1 .right .image {
     max-width: 50%;
   }
+
   .box_2 .right h1 {
     font-size: 40px;
   }
@@ -306,5 +454,14 @@
 
   .box_2 .left .image {
     max-width: 50%;
+    margin: 20px auto;
+  }
+
+  .box_3 h1 {
+    font-size: 18px;
+  }
+
+  .box_3 p {
+    font-size: 12px;
   }
 }

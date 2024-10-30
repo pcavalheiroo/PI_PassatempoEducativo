@@ -12,10 +12,12 @@
         href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/navbar_footer.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
+
+    <!-- Navbar -->
 
     <header>
         <div class="wrapper">
@@ -38,10 +40,14 @@
                         <a href="home.html">Home</a>
                     </li>
 
-                    <li>
-                        <a href="sociais.html">Eventos
-                            <img src="../svg/down_arrow.svg" alt="arrow" class="arrow-icon">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Eventos
+                            <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
                         </a>
+                        <div class="dropdown-content">
+                            <a href="sociais.html">Sociais</a>
+                            <a href="#">Corporativos</a>
+                        </div>
                     </li>
 
                     <li>
@@ -67,18 +73,18 @@
                 </div>
             </nav>
 
-            <div class="bg"></div>
-
         </div>
-
-        <!-- End of Navbar -->
 
     </header>
 
-    <!-- End of header -->
+    <!-- Fim da Navbar -->
+
+    <!-- Começo do Conteúdo Principal -->
+
+    <!-- Passatempo Eventos -->
 
     <main class="wrapper">
-        <section class="passatempo-eventos">
+        <section class="box_1">
             <div class="left">
                 <h1>
                     Passatempo <br>
@@ -96,13 +102,13 @@
             </div>
 
             <div class="right">
-                <img src="../images/home_image.png" alt="passatempo" class="home_image">
-                <img src="../svg/orange_spot.svg" alt="yellow_spot" class="yellow_spot">
+                <img src="../images/home_image.png" alt="Passatempo Eventos" class="image">
+                <img src="../svg/orange_spot.svg" alt="Mancha" class="asset">
             </div>
         </section>
     </main>
 
-    <!-- End of Content -->
+    <!-- Fim do Conteúdo Principal -->
 
     <footer>
         <div class="wrapper">

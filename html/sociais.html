@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sociais</title>
+    <title>Passatempo Eventos</title>
     <link rel="shortcut icon" href="../assets/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,27 +12,34 @@
         href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/navbar_footer.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/sociais.css">
 </head>
 
 <body>
 
     <header>
         <div class="wrapper">
+
             <nav>
                 <div class="logo">
-                    <a href="/home.html">
-                        <img src="../svg/logo.svg" alt="logo">
+                    <a href="home.html">
+                        <img src="../svg/logo.svg" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="logo_2">
+                    <a href="home.html">
+                        <img src="../svg/logo_2.svg" alt="Logo">
                     </a>
                 </div>
 
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="home.html">Home</a>
                     </li>
 
                     <li>
-                        <a href="#">Eventos
+                        <a href="">Eventos
                             <img src="../svg/down_arrow.svg" alt="arrow" class="arrow-icon">
                         </a>
                     </li>
@@ -53,6 +60,11 @@
                         <a href="#">Login</a>
                     </li>
                 </ul>
+
+                <!-- Ícone de menu -->
+                <div class="menu" onclick="toggleMenu()">
+                    <img src="../svg/menu.svg" alt="">
+                </div>
             </nav>
 
             <div class="bg"></div>
@@ -66,26 +78,24 @@
     <!-- End of header -->
 
     <main class="wrapper">
-        <section class="passatempo-eventos">
+        <section class="sociais">
+            <h1 class="title">Sociais</h1>
+        </section>
+
+        <section class="recreacao">
             <div class="left">
                 <h1>
-                    Passatempo <br>
-                    Eventos
+                    Recreação
                 </h1>
 
                 <p>
-                    A Passatempo Eventos é composta por profissionais qualificados e dedicados. Essa diversidade de
-                    conhecimentos e habilidades nos permite oferecer um atendimento personalizado e eficiente. Além
-                    disso, a constante troca de experiências e a colaboração entre os membros da equipe enriquecem nosso
-                    ambiente de trabalho, garantindo um ambiente acolhedor e propício ao aprendizado. Muitos
-                    profissionais fizeram parte de um curso Recreatur que oferecemos em São Paulo, incentivando a
-                    liderança nos jovens e expandindo suas perspectivas de trabalho.
+                    Nossos serviços de recreação são altamente detalhados e personalizados para atender às necessidades de cada faixa etária. Desenvolvemos jogos, dinâmicas e atividades sob medida para o público do seu evento. Além disso, contamos com uma equipe de recreadores treinados e apaixonados por proporcionar momentos de diversão e aprendizado para todas as idades. Nosso objetivo é garantir que cada participante se sinta acolhido e envolvido em experiências únicas e inesquecíveis.
                 </p>
             </div>
 
             <div class="right">
-                <img src="../images/home_image.png" alt="passatempo" class="home_image">
-                <img src="../svg/yellow_spot.svg" alt="yellow_spot" class="yellow_spot">
+                <img src="../images/recreacao.png" alt="passatempo" class="home_image">
+                <img src="../svg/red_spot.svg" alt="yellow_spot" class="yellow_spot">
             </div>
         </section>
     </main>
@@ -116,7 +126,7 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

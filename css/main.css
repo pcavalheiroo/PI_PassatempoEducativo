@@ -5,7 +5,7 @@
   border-radius: 20px;
   background-color: #FFBD57;
   height: 140px;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .title h1 {
@@ -23,7 +23,7 @@
   border-radius: 20px 20px 0px 0px;
   background-color: #FFBD57;
   height: 140px;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .title_con h1 {
@@ -73,7 +73,7 @@
   justify-content: space-between;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 40px;
   flex-wrap: wrap;
 }
@@ -136,7 +136,7 @@
   justify-content: space-between;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 40px;
   flex-wrap: wrap;
 }
@@ -201,14 +201,14 @@
   justify-content: space-between;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 40px;
   flex-wrap: wrap;
 }
 
 .box_3 h1 {
   font-family: "Luckiest Guy";
-  font-size: 40px;
+  font-size: 75px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -237,11 +237,11 @@
 /* Media Query */
 
 @media (max-width: 1250px) {
-  .title {
+  .title, .title_con {
     margin-top: 50px;
   }
 
-  .title h1 {
+  .title h1, .title_con h1 {
     font-size: 75px;
   }
 
@@ -264,22 +264,22 @@
     margin: 40px 20px;
   }
 
-  .box_1 .right .asset {
+  .box_1 .right .asset, .box_2 .left .asset {
     display: none;
   }
 
-  .box_1 .left h1 {
+  .box_1 .left h1, .box_2 .right h1,  .box_3 h1 {
     font-size: 60px;
     margin-top: 20px;
   }
 
-  .box_1 .left p {
+  .box_1 .left p, .box_2 .right p, .subtitle p {
     font-size: 18px;
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
   }
-
+  /* -------------------------------------------------- */
   .box_2 {
     flex-direction: column-reverse;
     align-items: center;
@@ -301,28 +301,8 @@
     width: 100%;
   }
 
-  .box_2 .left .asset {
-    display: none;
-  }
-
-  .box_2 .right h1 {
-    font-size: 60px;
-    margin-top: 20px;
-  }
-
-  .box_2 .right p {
-    font-size: 18px;
-    max-width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
   .box_2 {
     margin-top: 50px;
-  }
-
-  .box_3 h1 {
-    font-size: 35px;
   }
 
   .box_3 p {
@@ -331,83 +311,47 @@
 }
 
 @media (max-width: 992px) {
-  .title h1 {
+  .title, .title_con h1 {
     font-size: 65px;
   }
 
-  .box_1 {
+  .box_1,  .box_2, .box_3 {
     margin-top: 50px;
   }
 
-  .box_1 .left h1 {
+  .box_1 .left h1,  .box_2 .right h1, .box_3 h1 {
     font-size: 50px;
   }
 
-  .box_1 .left p {
-    font-size: 16px;
-  }
-
-  .box_2 {
-    margin-top: 50px;
-  }
-
-  .box_2 .right h1 {
-    font-size: 50px;
-  }
-
-  .box_2 .right p {
-    font-size: 16px;
-  }
-
-  .box_3 {
-    margin-top: 50px;
-  }
-
-  .box_3 h1 {
-    font-size: 28px;
-  }
-
-  .box_3 p {
+  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p {
     font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
-  .title {
+  .title, .title_con {
     margin-top: 30px;
     height: 100px;
   }
 
-  .title h1 {
+  .title, .title_con h1 {
     font-size: 50px;
   }
 
-  .box_1 {
+  .box_1, .box_2, .box_3 {
     margin-top: 30px;
   }
 
-  .box_1 .left h1 {
+  .box_1 .left h1, .box_2 .right h1, .box_3 h1 {
     font-size: 40px;
   }
 
-  .box_1 .left p {
+  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p {
     font-size: 14px;
   }
 
   .box_1 .right .image {
     max-width: 70%;
-  }
-
-  .box_2 {
-    margin-top: 30px;
-  }
-
-  .box_2 .right h1 {
-    font-size: 40px;
-  }
-
-  .box_2 .right p {
-    font-size: 14px;
   }
 
   .box_2 .left .image {
@@ -415,28 +359,15 @@
     display: flex;
     align-self: center;
     margin: 40px auto;
-
-  }
-
-  .box_3 {
-    margin-top: 30px;
-  }
-
-  .box_3 h1 {
-    font-size: 24px;
-  }
-
-  .box_3 p {
-    font-size: 14px;
   }
 }
 
 @media (max-width: 320px) {
-  .box_1 .left h1 {
+  .box_1 .left h1, .box_2 .right h1, .box_3 h1 {
     font-size: 40px;
   }
 
-  .box_1 .left p {
+  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p {
     font-size: 12px;
   }
 
@@ -444,24 +375,8 @@
     max-width: 50%;
   }
 
-  .box_2 .right h1 {
-    font-size: 40px;
-  }
-
-  .box_2 .right p {
-    font-size: 12px;
-  }
-
   .box_2 .left .image {
     max-width: 50%;
     margin: 20px auto;
-  }
-
-  .box_3 h1 {
-    font-size: 18px;
-  }
-
-  .box_3 p {
-    font-size: 12px;
   }
 }

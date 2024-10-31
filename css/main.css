@@ -234,6 +234,56 @@
   margin-bottom: auto;
 }
 
+/* Contato */
+
+.contato-title {
+  display: flex;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #FFBD57;
+  width: fit-content;
+  height: 50px;
+  padding: 30px;
+  margin-top: 100px;
+  margin: 100px auto 0 auto;
+}
+
+.contato-title h1 {
+  font-family: "Luckiest Guy";
+  font-size: 30px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+
+.contato-content {
+  display: flex;
+  width: fit-content;
+  height: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.80);
+  margin-top: 0;
+  padding: 40px;
+  margin: auto;
+}
+
+.contato-content img {
+  width: 60px;
+}
+
+.contato-content p {
+  font-family: Ubuntu;
+  font-size: 22px;
+  font-style: normal;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  padding-left: 20px;
+}
+
 /* Media Query */
 
 @media (max-width: 1250px) {
@@ -279,7 +329,7 @@
     margin: 0 auto;
     text-align: center;
   }
-  /* -------------------------------------------------- */
+
   .box_2 {
     flex-direction: column-reverse;
     align-items: center;
@@ -308,45 +358,56 @@
   .box_3 p {
     font-size: 18px;
   }
+
+  .contato-title {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 992px) {
-  .title, .title_con h1 {
+  .title h1, .title_con h1 {
     font-size: 65px;
   }
 
-  .box_1,  .box_2, .box_3 {
+  .box_1, .box_2, .box_3 {
     margin-top: 50px;
   }
 
-  .box_1 .left h1,  .box_2 .right h1, .box_3 h1 {
+  .box_1 .left h1, .box_2 .right h1, .box_3 h1 {
     font-size: 50px;
   }
 
-  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p {
+  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p, .contato-content p {
     font-size: 16px;
+  }
+
+  .contato-content {
+    padding: 30px;
+  }
+
+  .contato-title h1 {
+    font-size: 25px;
+  }
+
+  .contato-content img {
+    width: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .title, .title_con {
-    margin-top: 30px;
     height: 100px;
   }
 
-  .title, .title_con h1 {
-    font-size: 50px;
-  }
-
-  .box_1, .box_2, .box_3 {
-    margin-top: 30px;
+  .title h1, .title_con h1 {
+    font-size: 30px;
   }
 
   .box_1 .left h1, .box_2 .right h1, .box_3 h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
-  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p {
+  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p, .contato-content p {
     font-size: 14px;
   }
 
@@ -360,14 +421,30 @@
     align-self: center;
     margin: 40px auto;
   }
+
+  .contato-title h1 {
+    font-size: 20px;
+  }
+
+  .contato-content img {
+    width: 30px;
+  }
 }
 
 @media (max-width: 320px) {
+  .title, .title_con {
+    height: 70px;
+  }
+
+  .title, .title_con h1 {
+    font-size: 20px;
+  }
+
   .box_1 .left h1, .box_2 .right h1, .box_3 h1 {
     font-size: 40px;
   }
 
-  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p {
+  .box_1 .left p, .box_2 .right p, .box_3 p, .subtitle p , .contato-content p {
     font-size: 12px;
   }
 
@@ -378,5 +455,9 @@
   .box_2 .left .image {
     max-width: 50%;
     margin: 20px auto;
+  }
+
+  .contato-title img {
+    width: 25px;
   }
 }

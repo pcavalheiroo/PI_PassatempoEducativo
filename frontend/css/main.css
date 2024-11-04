@@ -524,7 +524,7 @@ h2 a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .title, .title_con {
     height: 100px;
   }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficinas</title>
+    <title>Passatempo Eventos</title>
     <link rel="shortcut icon" href="../assets/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,13 @@
 
 <body>
 
-    <!-- Navbar -->
+    <!-- Desktop Navbar -->
 
     <header>
         <div class="wrapper">
 
-            <nav>
+            <nav class="desktop">
+
                 <div class="logo">
                     <a href="../html/home.html">
                         <img src="../svg/logo.svg" alt="Logo">
@@ -30,9 +31,7 @@
                 </div>
 
                 <div class="logo_2">
-                    <a href="../html/home.html">
-                        <img src="../svg/logo_2.svg" alt="Logo">
-                    </a>
+                    <img src="../svg/logo_2.svg" alt="Logo">
                 </div>
 
                 <ul>
@@ -44,6 +43,7 @@
                         <a href="#" class="dropbtn">Eventos
                             <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
                         </a>
+
                         <div class="dropdown-content">
                             <a href="sociais.html">Sociais</a>
                             <a href="corporativos.html">Corporativos</a>
@@ -68,59 +68,77 @@
                 </ul>
 
                 <!-- Ícone de menu -->
-                <div class="menu" onclick="toggleMenu()">
-                    <img src="../svg/menu.svg" alt="">
+                <div class="menu" aria-label="Abrir menu">
+                    <img src="../svg/menu.svg" alt="Menu" id="menu-icon">
                 </div>
+            </nav>
+
+            <!-- Mobile Navbar -->
+
+            <nav class="mobile">
+                <img src="../svg/close-icon.svg" alt="Fechar" class="close-icon">
+
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+    
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Eventos
+                            <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sociais.html">Sociais</a>
+                            <a href="corporativos.html">Corporativos</a>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <a href="oficinas.html">Oficinas</a>
+                    </li>
+    
+                    <li>
+                        <a href="saude.html">Saúde e Bem Estar</a>
+                    </li>
+    
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+    
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
             </nav>
 
         </div>
 
     </header>
 
-    <!-- Fim da Navbar -->
+    <!-- Começo do Conteúdo Principal -->
+
+    <!-- Passatempo Eventos -->
 
     <main class="wrapper">
-        <section>
-            <div class="title">
+        <section class="box_1">
+            <div class="left">
                 <h1>
-                    Contato
+                    Passatempo Eventos
                 </h1>
-            </div>
-        </section>
 
-        <section>
-            <div class="contato-title">
-                <h1>
-                    E-mail
-                </h1>
-            </div>
-
-            <div class="contato-content">
-                <img src="../svg/email.svg" alt="E-mail">
                 <p>
-                    passatempo@passatempoeducativo.org.br
+                    A Passatempo Eventos é composta por profissionais qualificados e dedicados. Essa diversidade de conhecimentos e habilidades nos permite oferecer um atendimento personalizado e eficiente. Além disso, a constante troca de experiências e a colaboração entre os membros da equipe enriquecem nosso ambiente de trabalho, garantindo um ambiente acolhedor e propício ao aprendizado. Muitos profissionais fizeram parte de um curso Recreatur que oferecemos em São Paulo, incentivando a liderança nos jovens e expandindo suas perspectivas de trabalho.
                 </p>
             </div>
-        </section>
 
-        <section>
-            <div class="contato-title">
-                <h1>
-                    WhatsApp
-                </h1>
-            </div>
-
-            <div class="contato-content">
-                <img src="../svg/whatsapp.svg" alt="E-mail">
-                <p>
-                    (11) 9 9757-9540
-                </p>
+            <div class="right">
+                <img src="../images/home_image.png" alt="Passatempo Eventos" class="image">
+                <img src="../svg/orange_spot.svg" alt="Mancha" class="asset">
             </div>
         </section>
-
     </main>
 
-    <!-- End of Content -->
+    <!-- Fim do Conteúdo Principal -->
 
     <footer>
         <div class="wrapper">
@@ -146,7 +164,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js" defer></script>
+    <script src="../../js/main.js" defer></script>
 </body>
 
 </html>

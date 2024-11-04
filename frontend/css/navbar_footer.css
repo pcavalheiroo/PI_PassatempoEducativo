@@ -27,7 +27,7 @@ body {
 
 /* Navbar */
 
-nav {
+nav.desktop {
   display: flex;
   justify-content: flex-start;
   border-radius: 0px 0px 20px 20px;
@@ -42,20 +42,20 @@ nav {
   padding: 0 20px;
 }
 
-nav .logo {
+nav.desktop .logo {
   margin-left: 30px;
   height: auto;
 }
 
-nav .logo img {
+nav.desktop .logo img {
   width: 80%;
 }
 
-nav .logo_2 {
+nav.desktop .logo_2 {
   display: none;
 }
 
-nav ul {
+nav.desktop ul {
   display: flex;
   align-items: center;
   list-style: none;
@@ -69,7 +69,7 @@ nav ul {
   flex-shrink: 1;
 }
 
-nav ul li {
+nav.desktop ul li {
   position: relative;
   display: flex;
   padding: 0px 20px;
@@ -79,7 +79,7 @@ nav ul li {
   padding: 0 10px;
 }
 
-nav ul li a {
+nav.desktop ul li a {
   font-family: "Luckiest Guy", sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -94,7 +94,7 @@ nav ul li a {
   z-index: 100;
 }
 
-nav ul li a:hover {
+nav.desktop ul li a:hover {
   font-family: "Luckiest Guy", sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -122,7 +122,6 @@ nav ul li a:hover {
   left: 2.5vw;
   border-radius: 0px 0px 20px 20px;
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 160px;
   z-index: 1;
   box-shadow: none;
@@ -142,9 +141,9 @@ nav ul li a:hover {
   top: 0;
   left: 0;
   right: 0;
-  height: 38px; /* Ajuste conforme a sobreposição */
-  background-color: #e1e7fa; /* Transparência na sobreposição */
-  z-index: -1; /* Colocar atrás do conteúdo */
+  height: 38px;
+  background-color: #e1e7fa;
+  z-index: -1;
 }
 
 .dropdown.active .dropdown-content {
@@ -156,6 +155,7 @@ nav ul li a:hover {
 }
 
 /* Menu */
+
 .menu {
   display: none;
   flex-direction: column;
@@ -165,6 +165,99 @@ nav ul li a:hover {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+nav.mobile {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, #3E4096, #8DA5ED);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.close-icon {
+  position: fixed;
+  top: 32px;
+  right: 5vw;
+  width: 40px;
+  cursor: pointer;
+}
+
+nav.mobile ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav.mobile ul li {
+  margin: 30px 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  padding: 0px 20px;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+nav.mobile ul li a {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: flex;
+  transition: all 0.3s ease 0s;
+  margin: 30px;
+}
+
+nav.mobile ul li a:hover {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  color: #FFFFFF;
+  -webkit-text-stroke: 6px var(--yellow);
+  paint-order: stroke fill;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+}
+
+nav.mobile .dropdown-content {
+  display: none;
+  left: 3vw;
+  top: 70px;
+  left: 50%;
+  align-items: center;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* background-image: linear-gradient(45deg, #3E4096, #8DA5ED); */
+}
+
+nav.mobile .dropdown-content a {
+  padding: 0;
+}
+
+nav.mobile .dropdown-content::after {
+  height: 0;
+}
+
+nav.mobile .dropdown-content.active {
+  display: flex;
+  align-self: center;
 }
 
 /* Footer */
@@ -204,21 +297,21 @@ footer {
 /* Media Query */
 
 @media (max-width: 1500px) {
-  nav .logo {
+  nav.desktop .logo {
     margin-left: 10px;
   }
-  
-  nav ul li a {
+
+  nav.desktop ul li a {
     font-size: 18px;
   }
 
-  nav ul li a:hover {
+  nav.desktop ul li a:hover {
     font-size: 20px;
   }
 }
 
 @media (max-width: 1250px) {
-  nav ul li a:hover {
+  nav.desktop ul li a:hover {
     font-size: 20px;
   }
 
@@ -249,11 +342,11 @@ footer {
 }
 
 @media (max-width: 992px) {
-  nav ul li a {
+  nav.desktop ul li a {
     font-size: 14px;
   }
 
-  nav ul li a:hover {
+  nav.desktop ul li a:hover {
     font-size: 18px
   }
 
@@ -285,15 +378,15 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-  nav {
+@media (max-width: 800px) {
+  nav.desktop {
     height: 150px;
     padding: 50px;
     padding-left: 30px;
     height: 20px;
   }
 
-  nav ul {
+  nav.desktop ul {
     display: none !important;
   }
 
@@ -305,11 +398,12 @@ footer {
     width: 70%;
   }
 
-  nav ul.active {
+  nav.desktop ul.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%;  /* Logo abaixo da navbar */
+    top: 100%;
+    /* Logo abaixo da navbar */
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
@@ -318,22 +412,26 @@ footer {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
-  nav ul {
+  nav.desktop ul {
     transition: all 0.3s ease;
   }
-  
-  nav .logo img {
+
+  nav.desktop .logo img {
     display: none;
   }
 
-  nav .logo_2 {
+  nav.desktop .logo_2 {
     display: flex;
   }
 
-  nav .logo_2 img {
+  .logo_2 img {
     width: 25%;
   }
-  
+
+  .arrow-icon {
+    width: 17px;
+  }
+
   footer {
     height: 90px;
   }
@@ -355,8 +453,9 @@ footer {
 }
 
 @media (max-width: 576px) {
+
   .menu img {
-    width: 80%;
+    width: 60%;
   }
 
   .social-media {

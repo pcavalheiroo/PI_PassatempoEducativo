@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos Sociais</title>
+    <title>Oficinas</title>
     <link rel="shortcut icon" href="../assets/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
     <header>
         <div class="wrapper">
 
-            <nav>
+            <nav class="desktop">
                 <div class="logo">
                     <a href="../html/home.html">
                         <img src="../svg/logo.svg" alt="Logo">
@@ -68,67 +68,94 @@
                 </ul>
 
                 <!-- Ícone de menu -->
-                <div class="menu" onclick="toggleMenu()">
-                    <img src="../svg/menu.svg" alt="">
+                <div class="menu" aria-label="Abrir menu">
+                    <img src="../svg/menu.svg" alt="Menu" id="menu-icon">
                 </div>
             </nav>
 
         </div>
+        
+            <!-- Mobile Navbar -->
+
+            <nav class="mobile">
+                <img src="../svg/close-icon.svg" alt="Fechar" class="close-icon">
+
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+    
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Eventos
+                            <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sociais.html">Sociais</a>
+                            <a href="corporativos.html">Corporativos</a>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <a href="oficinas.html">Oficinas</a>
+                    </li>
+    
+                    <li>
+                        <a href="saude.html">Saúde e Bem Estar</a>
+                    </li>
+    
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+    
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
 
     </header>
 
     <!-- Fim da Navbar -->
 
-
-
     <main class="wrapper">
-        <section class="title">
-            <h1>Sociais</h1>
-        </section>
-
-        <section class="box_1">
-            <div class="left">
+        <section>
+            <div class="title">
                 <h1>
-                    Recreação
+                    Contato
                 </h1>
-
-                <p>
-                    Nossos serviços de recreação são altamente detalhados e personalizados para atender às necessidades de cada faixa etária. Desenvolvemos jogos, dinâmicas e atividades sob medida para o público do seu evento. Além disso, contamos com uma equipe de recreadores treinados e por proporcionar momentos de diversão e aprendizado para todas as idades. Nosso objetivo é garantir que cada participante se sinta acolhido e envolvido em experiências únicas e inesquecíveis.
-                </p>
-            </div>
-
-            <div class="right">
-                <img src="../images/recreacao_image.png" alt="Recreação" class="image">
-                <img src="../svg/red_spot.svg" alt="Mancha vermelha" class="asset">
             </div>
         </section>
 
-        <section class="box_2">
-            <div class="left">
-                <img src="../images/aniversario_tematico_image.png" alt="aniversario_tematico" class="image">
-                <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
+        <section>
+            <div class="contato-title">
+                <h1>
+                    E-mail
+                </h1>
             </div>
 
-            <div class="right">
-                <h1>
-                    Aniversário Temático
-                </h1>
-
+            <div class="contato-content">
+                <img src="../svg/email.svg" alt="E-mail">
                 <p>
-                    Transforme o seu aniversário em um evento inesquecível! Oferecemos festas personalizadas, repletas de diversão, alegria e momentos especiais para todas as idades. Nosso espaço é ideal para festas temáticas, brincadeiras interativas e atividades criativas, garantindo que a diversão esteja sempre presente!
+                    passatempo@passatempoeducativo.org.br
                 </p>
             </div>
         </section>
 
-        <section class="box_3">
-            <h1>
-                Programção de Férias - Condomínios e Clubes
-            </h1>
+        <section>
+            <div class="contato-title">
+                <h1>
+                    WhatsApp
+                </h1>
+            </div>
 
-            <p>
-                Durante as férias, garantimos que as crianças e adolescentes do condomínio tenham uma agenda cheia de aventuras, aprendizado e muita diversão! Com uma programação diversificada, nossas atividades são projetadas para entreter, educar e desenvolver habilidades sociais e motoras de maneira lúdica.
-            </p>
+            <div class="contato-content">
+                <img src="../svg/whatsapp.svg" alt="E-mail">
+                <p>
+                    (11) 9 9757-9540
+                </p>
+            </div>
         </section>
+
     </main>
 
     <!-- End of Content -->
@@ -157,7 +184,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js" defer></script>
+    <script src="../../js/main.js" defer></script>
 </body>
 
 </html>

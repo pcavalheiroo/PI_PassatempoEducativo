@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde e Bem Estar</title>
+    <title>Login</title>
     <link rel="shortcut icon" href="../assets/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
     <header>
         <div class="wrapper">
 
-            <nav>
+            <nav class="desktop">
                 <div class="logo">
                     <a href="../html/home.html">
                         <img src="../svg/logo.svg" alt="Logo">
@@ -68,9 +68,47 @@
                 </ul>
 
                 <!-- Ícone de menu -->
-                <div class="menu" onclick="toggleMenu()">
-                    <img src="../svg/menu.svg" alt="">
+                <div class="menu" aria-label="Abrir menu">
+                    <img src="../svg/menu.svg" alt="Menu" id="menu-icon">
                 </div>
+            </nav>
+
+            <!-- Mobile Navbar -->
+
+            <nav class="mobile">
+                <img src="../svg/close-icon.svg" alt="Fechar" class="close-icon">
+
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+    
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Eventos
+                            <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sociais.html">Sociais</a>
+                            <a href="corporativos.html">Corporativos</a>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <a href="oficinas.html">Oficinas</a>
+                    </li>
+    
+                    <li>
+                        <a href="saude.html">Saúde e Bem Estar</a>
+                    </li>
+    
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+    
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
             </nav>
 
         </div>
@@ -81,54 +119,35 @@
 
     <main class="wrapper">
         <section>
-            <div class="title_con">
+            <div class="title">
                 <h1>
-                    Saúde e Bem Estar
+                    Faça seu login
                 </h1>
-            </div>
-            <div class="subtitle">
-                <p>
-                    Sabemos a importância do cuidado com a saúde e o bem-estar através da prática de atividades físicas, oferecendo diferentes modalidades e serviços que promovem um estilo de vida saudável.
-                </p>
             </div>
         </section>
 
-        <section class="box_1">
-            <div class="left">
-                <h1>
-                    Clínicas Esportivas
-                </h1>
+        <section class="box_3">
 
-                <p>
-                    Nossas Clínicas Esportivas são projetadas para introduzir crianças ao mundo dos esportes de maneira divertida, segura e educativa. Com foco no desenvolvimento físico, social e emocional, oferecemos uma ampla gama de modalidades esportivas que estimulam o espírito de equipe, a disciplina, e o gosto pela atividade física desde cedo. As atividades são conduzidas por profissionais qualificados e utilizam métodos lúdicos para ensinar os fundamentos de diferentes esportes.
-                    Futebol, Basquete, Vôlei, Ginástica, Circo, Capoeira, Handebol, Takkyu Volley, Esgrima, Pilates, Funcional Kids e muito mais.
+            <img src="../svg/orange_wave.svg" alt="Onda laranja" class="orange_wave" style="top: 0; left: 0; transform: rotate(180deg);">
+            <img src="../svg/orange_wave.svg" alt="Onda laranja" class="orange_wave" style="bottom: 0; right: 0;">
 
-                </p>
+            <div class="textfield">
+                <label for="email">E-mail:</label>
+                <input type="email" name="e-mail" placeholder="Digite seu e-mail..." required>
             </div>
 
-            <div class="right">
-                <img src="../images/recreacao_image.png" alt="recreacao" class="image">
-                <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
-            </div>
-        </section>
-
-        <section class="box_2">
-            <div class="left">
-                <img src="../images/aniversario_tematico_image.png" alt="aniversario_tematico" class="image">
-                <img src="../svg/red_spot.svg" alt="Mancha vermelha" class="asset">
+            <div class="textfield">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" placeholder="Digite sua senha..." required>
             </div>
 
-            <div class="right">
-                <h1>
-                    Estação Fitness
-                </h1>
+            <button type="submit" class="btn-login">Login</button>
 
-                <p>
-                    A Estação Fitness é um espaço completo para todas as idades, dedicado ao exercício físico e ao bem-estar. Aqui, oferecemos uma variedade de atividades para quem busca melhorar a saúde, a condição física e o bem-estar geral. Nossas sessões incluem treinos personalizados, aulas em grupo e programas de condicionamento físico que atendem às necessidades de iniciantes a atletas avançados.
-                    Yoga, Pilates, Zumba, Funcional, Crossfit e muito mais.
-
-                </p>
-            </div>
+            <p style="margin: 30px;">
+                Deseja cadastrar um novo administrador? <br> <br>
+                <a href="cadastro.html">Clique aqui e faça o seu cadastro!</a>
+            </p>
+            
         </section>
 
     </main>
@@ -159,7 +178,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js" defer></script>
+    <script src="../../js/main.js" defer></script>
 </body>
 
 </html>

@@ -1,12 +1,12 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const app = express();
-
-app.use(express.json());
-app.use(cors());
+const express = require('express')
+const cors = require('cors')
+const mongoose = require('mongoose')
+const uniqueValidator = require('mongoose-unique-validator')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+const app = express()
+app.use(express.json())
+app.use(cors())
 
 //Schema de usuário
 const usuarioSchema = mongoose.Schema({
@@ -14,11 +14,12 @@ const usuarioSchema = mongoose.Schema({
   senha: { type: String, required: true }
 })
 
+usuarioSchema.plugin(uniqueValidator)
 const Usuario = mongoose.model("Usuario", usuarioSchema)
 
 //conexão ao MongoDB
 async function conectarAoMongo() {
-  await mongoose.connect(`mongodb+srv://dantefernandessilvalima:Pardo123@cluster0.cpeu3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
+  await mongoose.connect(`mongodb+srv://dantefernandessilvalima:Pardo123@cluster0.cpeu3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 }
 
 // Endpoint de login (apenas para usuarios existentes)

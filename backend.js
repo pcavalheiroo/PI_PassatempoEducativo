@@ -22,21 +22,37 @@ async function conectarAoMongo() {
   await mongoose.connect(`mongodb+srv://dantefernandessilvalima:Pardo123@cluster0.cpeu3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 }
 
+app.post('/signup', async (req, res) => {
+  try{
+      const login = req.body.login
+      const senha = req.body.senha
+      const senhaCriptografada = await bcrypt.hash(senha, 10)
+      const usuario = new Usuario({login: login, senha: senhaCriptografada})
+      const respMongo = await usuario.save()
+      console.log(respMongo)
+      res.end()
+      res.status(201).end()
+  }
+  catch(e) {
+      console.log(e)
+      res.status(409).end()
+  }
+})
+
 // Endpoint de login (apenas para usuarios existentes)
 app.post('/login', async (req, res) => {
-  const { login, password } = req.body
-
+  const { login, senha } = req.body
   // Verificando o usuário
   const usuarioExiste = await Usuario.findOne({ login: login })
   if (!usuarioExiste) {
     return res.status(401).json({ mensagem: "Login inválido" })
   }
-
   // Verificando a senha
-  const senhaValida = await bcrypt.compare(password, usuarioExiste.senha)
+  const senhaValida = await bcrypt.compare(senha, usuarioExiste.senha)
   if (!senhaValida) {
     return res.status(401).json({ mensagem: "Senha inválida" })
   }
+
 
   // Gerando o token
   const token = jwt.sign(

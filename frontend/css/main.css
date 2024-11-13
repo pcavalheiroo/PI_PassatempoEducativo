@@ -366,7 +366,7 @@ h2 a:hover {
   border-radius: 20px;
   background-color: var(--yellow);
   font-family: "Luckiest Guy";
-  font-size: 4vw;
+  font-size: 3vw;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 800;
@@ -395,6 +395,10 @@ h2 a:hover {
   font-style: normal;
   align-items: center;
   padding-left: 0px;
+}
+
+.d-none{
+  display: none;
 }
 
 /* Media Query */
@@ -520,7 +524,7 @@ h2 a:hover {
   }
 
   .btn-login {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
 
@@ -578,7 +582,7 @@ h2 a:hover {
   }
 
   .btn-login {
-    font-size: 7vw;
+    font-size: 3vw;
   }
 }
 

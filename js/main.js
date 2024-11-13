@@ -84,3 +84,40 @@ function toggleMenu() {
       }
     });
   });
+  
+  
+  document.getElementById('loginButton').addEventListener('click', async () => {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    function exibirAlerta(seletor, innerHTML, classesToAdd, classesToRemove, timeout) {
+        let alert = document.querySelector(seletor);
+        alert.innerHTML = innerHTML;
+        alert.classList.add(...classesToAdd);
+        alert.classList.remove(...classesToRemove);
+        setTimeout(() => {
+            alert.classList.remove(...classesToAdd);
+            alert.classList.add(...classesToRemove);
+        }, timeout);
+    }
+
+    try {
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ login: email, password: password })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            localStorage.setItem('token', data.token);
+            exibirAlerta('.alert', 'Login Realizado com sucesso!!', ['show', 'alert-success'], ['d-none'], 2000);
+        } else {
+            exibirAlerta('.alert', 'Não foi possível realizar o login.', ['show', 'alert-danger'], ['d-none'], 2000);
+        }
+    } catch (e) {
+        exibirAlerta('.alert', 'Preencha todos os campos!!', ['show', 'alert-warning'], ['d-none'], 2000);
+    }
+});

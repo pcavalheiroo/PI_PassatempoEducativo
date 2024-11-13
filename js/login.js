@@ -1,6 +1,6 @@
-document.getElementById('loginButton').addEventListener('click', async () => {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+document.getElementById('#loginButton').addEventListener('click', async () => {
+    const email = document.getElementById('#email').value;
+    const password = document.getElementById('#senha').value;
 
     try {
         const response = await fetch('http://localhost:3000/login', {
@@ -8,21 +8,20 @@ document.getElementById('loginButton').addEventListener('click', async () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ login: email, password: password })
+            body: JSON.stringify({ login: email, senha: senha})
         });
 
         if (response.ok) {
             const data = await response.json();
             // Armazena o token em localStorage ou sessionStorage
             localStorage.setItem('token', data.token);
-            alert('Login bem-sucedido!');
+            exibirAlerta('.alert-modal-login', 'Login Realizado com sucesso!!', ['show', 'alert-sucess'], ['d-none'], 2000)
             // Redirecionar para a página principal ou dashboard
             window.location.href = 'home.html';
         } else {
-            alert('Login ou senha inválidos.');
+            exibirAlerta('.alert-modal-login', 'Preencha todos os campos!!', ['show', 'alert-danger'], ['d-none'], 2000)
         }
-    } catch (error) {
-        console.error('Erro:', error);
-        alert('Erro ao realizar login. Tente novamente.');
+    } catch (e) {   
+        exibirAlerta('.alert-modal-login', 'Falha na autenticação!!', ['show', 'alert-warning'], ['d-none'], 2000)
     }
 });

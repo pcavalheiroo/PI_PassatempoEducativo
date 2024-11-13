@@ -401,7 +401,33 @@ h2 a:hover {
   display: none;
 }
 
+.alert-success {
+  background-color: #16ce41;
+  border-radius: 20px;
+  padding: 5px;
+  font-family: ubuntu;
+  font-weight: bold;
+}
 
+.alert-error {
+  background-color: rgb(243, 29, 29);
+  border-radius: 20px;
+  padding: 5px;
+  font-family: ubuntu;
+  font-weight: bold;
+}
+
+.alert-warning {
+  background-color: rgb(253, 253, 76);
+  border-radius: 20px;
+  padding: 5px;
+  font-family: ubuntu;
+  font-weight: bold;
+}
+
+.show {
+  display: block;
+}
 
 /* Media Query */
 

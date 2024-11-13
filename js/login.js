@@ -12,9 +12,9 @@ document.getElementById('loginButton').addEventListener('click', async () => {
             alert.classList.add(...classesToRemove);
         }, timeout);
     }
-    
+
     if (!email || !password) {
-        exibirAlerta('.alert', 'Preencha todos os campos!', ['show'], ['d-none'], 2000);
+        exibirAlerta('.alert', 'Preencha todos os campos!', ['alert-warning','show'], ['d-none'], 2000);
         return;
     }
 
@@ -30,12 +30,12 @@ document.getElementById('loginButton').addEventListener('click', async () => {
         if (response.ok) {
             const data = await response.json();
             localStorage.setItem('token', data.token);
-            exibirAlerta('.alert', 'Login realizado com sucesso!', ['show'], ['d-none'], 2000);
+            exibirAlerta('.alert', 'Login realizado com sucesso!', ['alert-success','show'], ['d-none'], 2000);
         } else {
-            exibirAlerta('.alert', 'Não foi possível realizar o login.', ['show'], ['d-none'], 2000);
+            exibirAlerta('.alert', 'Não foi possível realizar o login!', ['alert-error' ,'show'], ['d-none'], 2000);
         }
     } catch (e) {
         console.error(e);
-        exibirAlerta('.alert', 'Erro ao tentar se conectar. Tente novamente mais tarde.', ['show'], ['d-none'], 2000);
+        exibirAlerta('.alert', 'Erro ao tentar se conectar. Tente novamente mais tarde.', ['alert-error','show'], ['d-none'], 2000);
     }
 });

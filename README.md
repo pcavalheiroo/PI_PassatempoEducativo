@@ -39,7 +39,7 @@ Antes de iniciar o projeto, você precisa garantir que tem os seguintes software
    Para começar, clone o repositório para o seu computador:
 
    ```bash
-   git clone https://github.com/seu-usuario/passatempo-eventos.git
+   git clone https://github.com/pcavalheiroo/passatempo-eventos.git
 
 2. **Acesse o diretório do projeto**
 
@@ -61,6 +61,43 @@ Antes de iniciar o projeto, você precisa garantir que tem os seguintes software
 
    ```bash
    npm start
+
+## **Estrutura de Arquivos**
+
+```bash
+projeto-passatempo/
+├── frontend/
+│   ├── assets/
+│   │   └──
+│   ├── images/
+│   │   └──
+│   ├── svg/
+│   │   └──
+│   └── css/
+|   |   └── main.css
+|   |   └── navbar_footer.css
+│   └── html/
+│       └── cadastro.html
+│       └── contato.html
+│       └── corporativos.html
+│       └── home.html
+│       └── login.html
+│       └── oficinas.html
+│       └── saude.html
+│       └── sociais.html
+│       └── teste.html
+├── js/
+|   └── edit.js
+|   └── login.js
+|   └── main.js
+├── node_modules/
+├── backend.js
+├── package.json
+├── package-lock.json
+├── LICENSE
+├── README.md
+└── .gitattributes
+```
 
 ## Licença
 

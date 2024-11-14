@@ -47,4 +47,21 @@ Antes de iniciar o projeto, você precisa garantir que tem os seguintes software
 
    ```bash
    cd passatempo-eventos
-4. 
+
+3. **Instale as dependências com npm:**
+
+   Instale as dependências listadas no arquivo `package.json`:
+
+   ```bash
+   npm install
+
+4. **Inicie o servidor de desenvolvimento:**
+
+   Após a instalação das dependências, inicie o servidor local para visualizar o projeto no navegador:
+
+   ```bash
+   npm start
+
+## Licença
+
+Este projeto é licenciado sob a licença MIT.

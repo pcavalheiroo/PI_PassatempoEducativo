@@ -413,11 +413,10 @@ h2 a:hover {
   border-radius: 5px;
   font-size: 16px;
   text-align: center;
-  z-index: 1000;
-  opacity: 0;
-  padding: 5px;
+  padding: 10px;
+  margin-top: 20px;
   border-radius: 20px;
-  font-family: ubuntu;
+  font-family: "Ubuntu";
   font-weight: bold;
 }
 
@@ -426,11 +425,11 @@ h2 a:hover {
 }
 
 .alert-error {
-  background-color: rgb(243, 29, 29);
+  background-color: #E05A5A;
 }
 
 .alert-warning {
-  background-color: rgb(253, 253, 76);
+  background-color: #FFBD57;
 }
 
 .show {

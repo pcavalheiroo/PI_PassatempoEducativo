@@ -1,5 +1,12 @@
 # Passatempo Eventos
 
+## Membros
+
+- Dante - RA:
+- Giovanna Dias - RA:
+- Raissa - RA:
+- Pedro Stanziani Cavalheiro - RA: 24.01648-9
+
 ## Descrição
 
 **Passatempo Eventos** é uma página web criada para a ONG **Passatempo Educativo**, com o objetivo de fornecer aos usuários informações sobre os eventos e atividades organizados pela ONG. O site exibe detalhes sobre os eventos, como nome, data, descrição, local e outros aspectos importantes para a participação. O projeto foi desenvolvido utilizando **HTML**, **CSS** e **JavaScript** puro, com todas as dependências gerenciadas através do **npm**.

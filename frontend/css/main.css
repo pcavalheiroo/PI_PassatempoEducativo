@@ -406,18 +406,13 @@ h2 a:hover {
 }
 
 .alert {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
+  font-family: "Ubuntu";
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
   padding: 10px;
   margin-top: 20px;
   border-radius: 20px;
-  font-family: "Ubuntu";
-  font-weight: bold;
 }
 
 .alert-success {

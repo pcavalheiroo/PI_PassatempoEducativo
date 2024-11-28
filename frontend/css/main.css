@@ -6,7 +6,6 @@
   background-color: #FFBD57;
   height: 80px;
   margin-top: 50px;
-
 }
 
 .title h1 {
@@ -309,9 +308,9 @@ h2 a:hover {
   justify-content: space-between;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 0;
   padding: 40px;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 .contato-content img {
@@ -406,11 +405,10 @@ h2 a:hover {
 }
 
 .alert {
-  font-family: "Ubuntu";
+  font-family: "Luckiest Guy";
   font-size: 16px;
-  font-weight: bold;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   margin-top: 20px;
   border-radius: 20px;
 }
@@ -434,6 +432,36 @@ h2 a:hover {
 
 .d-none{
   display: none;
+}
+
+/* Painel de Textos */
+
+.edit-area {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.title-edit {
+  display: flex;
+  border-radius: 20px;
+  background-color: #E68183;
+  width: 40vw;
+  height: 80px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.title-edit h1 {
+  font-family: "Luckiest Guy";
+  font-size: 40px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
 }
 
 /* Media Query */

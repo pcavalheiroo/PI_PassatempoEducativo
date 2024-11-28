@@ -71,16 +71,16 @@ function toggleMenu() {
     const dropdownContentMobile = dropdownMobile.querySelector(".dropdown-content");
     const arrowIconMobile = dropdownMobile.querySelector('.arrow-icon');
   
-    // Toggle para abrir/fechar o dropdown no mobile
+    // Abrir/fechar o dropdown
     dropdownBtnMobile.addEventListener("click", function (event) {
-      event.preventDefault();  // Previne o comportamento padrão do link
-      dropdownContentMobile.classList.toggle("active");  // Alterna a classe 'active'
+      event.preventDefault();
+      dropdownContentMobile.classList.toggle("active");
   
-      // Alterna a rotação da seta
+      // Seta Rotação
       if (dropdownContentMobile.classList.contains('active')) {
-        arrowIconMobile.style.transform = 'rotate(180deg)'; // Gira a seta
+        arrowIconMobile.style.transform = 'rotate(180deg)';
       } else {
-        arrowIconMobile.style.transform = 'rotate(0deg)'; // Reseta a rotação
+        arrowIconMobile.style.transform = 'rotate(0deg)'; // Reseta
       }
     });
   });

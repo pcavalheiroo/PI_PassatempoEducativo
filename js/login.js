@@ -34,7 +34,9 @@ document.getElementById('loginButton').addEventListener('click', async () => {
         } else {
             exibirAlerta('.alert', 'Não foi possível realizar o login!', ['alert-error' ,'show'], ['d-none'], 2000);
         }
-    } catch (e) {
+    } 
+    
+    catch (e) {
         console.error(e);
         exibirAlerta('.alert', 'Erro ao tentar se conectar. Tente novamente mais tarde.', ['alert-error','show'], ['d-none'], 2000);
     }

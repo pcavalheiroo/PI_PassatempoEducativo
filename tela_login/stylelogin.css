@@ -1,0 +1,88 @@
+.login-header { 
+    background-color: rgba(255, 189, 87, 1); /* Fundo branco com transparência */
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 5px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do container */
+    font-family: "Luckiest Guy", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+
+.login-container {
+    display: flex; /* Ativa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 550px;
+    width: 100%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.80);
+    margin-top: 100px;
+    padding: 40px;
+    position: relative;
+}
+
+.login_image1{
+    width: 30%; /* Ajuste o tamanho conforme necessário */
+    height: 50; /* Mantém a proporção da imagem */
+    position: absolute;
+    bottom: -25.6%;
+    right: -3.6%;
+    border-radius: 10px;
+}
+
+.login_image2{
+    width: 30%; /* Ajuste o tamanho conforme necessário */
+    height: 50; /* Mantém a proporção da imagem */
+    position: absolute;
+    top: -20.4%;
+    left: -3.5%;
+    border-radius: 10px;
+}
+
+.login-form {
+    font-family: "Luckiest Guy", sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.button {
+    background-color: #FFBD57;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+p {
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-label {
+    font-size: 20px;
+    width: 100%;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 5px;
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

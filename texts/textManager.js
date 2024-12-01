@@ -221,11 +221,11 @@ async function AtualizarTextoSlime() {
   }
 }
 
-async function AtualizarTextoRobotica() {
+async function AtualizarTextoRobotica2() {
   try {
-    const texto = await getTexto('robotica');
-    atualizarTexto(texto.h1, '#robotica_h1');
-    atualizarTexto(texto.p, '#robotica_p');
+    const texto = await getTexto('robotica2');
+    atualizarTexto(texto.h1, '#robotica2_h1');
+    atualizarTexto(texto.p, '#robotica2_p');
   } catch (error) {
     console.error("Erro ao atualizar o texto: ", error);
   }
@@ -265,4 +265,26 @@ async function AtualizarTextoEstacaoFitness() {
 
 // Chamando Funções
 
-AtualizarTextoHome()
+AtualizarTextoHome();
+AtualizarTextoRecreacao();
+AtualizarTextoAniversarioTematico();
+AtualizarTextoProgramacaoFerias();
+AtualizarTextoCommunityDay();
+AtualizarTextoGame2030();
+AtualizarTextoKidsDay();
+AtualizarTextoLeilaoTematico();
+AtualizarTextoRobotica();
+AtualizarTextoSpaceRoom();
+AtualizarTextoTeatro();
+AtualizarTextoSipat();
+AtualizarTextoBatalhaNerf();
+AtualizarTextoBolhasGigantes();
+AtualizarTextoCatavento();
+AtualizarTextoCulinaria();
+AtualizarTextoPinturaTela();
+AtualizarTextoPulseiraMacrame();
+AtualizarTextoSlime();
+AtualizarTextoRobotica2();
+AtualizarTextoTerrario();
+AtualizarTextoClinicasEsportivas();
+AtualizarTextoEstacaoFitness();

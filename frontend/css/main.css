@@ -592,11 +592,11 @@ h2 a:hover {
 }
 
 @media (max-width: 800px) {
-  .title, .title_con {
+  .title, .title_con, .title-edit {
     height: 100px;
   }
 
-  .title h1, .title_con h1 {
+  .title h1, .title_con h1, .title-edit h1 {
     font-size: 30px;
   }
 
@@ -650,11 +650,11 @@ h2 a:hover {
 }
 
 @media (max-width: 320px) {
-  .title, .title_con {
+  .title, .title_con, .title-edit {
     height: 70px;
   }
 
-  .title, .title_con h1 {
+  .title, .title_con h1, .title-edit h1 {
     font-size: 20px;
   }
 

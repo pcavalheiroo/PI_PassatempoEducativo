@@ -543,6 +543,10 @@ h2 a:hover {
     margin: 40px 20px;
   }
 
+  .carrossel-images {
+    margin: 40px 0px;
+  }
+
   .box_1 .right .asset, .box_2 .left .asset {
     display: none;
   }

@@ -63,6 +63,55 @@
   margin-bottom: auto;
 }
 
+/* Carrossel */
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.carrossel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-images img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
 /* Conteúdo Tipo 1 */
 
 .box_1 {

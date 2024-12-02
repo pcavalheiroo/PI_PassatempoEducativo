@@ -118,6 +118,34 @@
     <!-- Fim da Navbar -->
 
     <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <!-- Começo do Conteúdo Principal -->
+
         <section>
             <div class="title_con">
                 <h1>
@@ -149,14 +177,14 @@
             </div>
 
             <div class="right">
-                <img src="../images/nerf.jpeg" alt="Batalha Nerf" class="image">
+                <img src="../images/nerf.jpeg" alt="Imagem de uma batalha Nerf na quadra" class="image">
                 <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/bolhas_gigantes.jpeg" alt="Bolhas Gigantes" class="image">
+                <img src="../images/bolhas_gigantes.jpeg" alt="Imagem de crianças fazendo bolhas gigantes" class="image">
                 <img src="../svg/yellow_spot.svg" alt="Mancha amarela" class="asset">
             </div>
 
@@ -191,7 +219,7 @@
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/culinaria.png" alt="Culinária" class="image">
+                <img src="../images/culinaria.png" alt="Imagem da oficina de alfajor" class="image">
                 <img src="../svg/orange_spot.svg" alt="Mancha laranja" class="asset">
             </div>
 
@@ -227,14 +255,14 @@
             </div>
 
             <div class="right">
-                <img src="../images/pintura_em_tela.png" alt="Pintura em Tela" class="image">
+                <img src="../images/pintura_em_tela.png" alt="Imagem de crianças fazendo pinturas em tela" class="image">
                 <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/pulseira_macrame.png" alt="Pulseira Macramê" class="image">
+                <img src="../images/pulseira_macrame.png" alt="Imagem de crianças fazendo pulseiras" class="image">
                 <img src="../svg/yellow_spot.svg" alt="Mancha amarela" class="asset">
             </div>
 
@@ -283,14 +311,14 @@
             </div>
 
             <div class="right">
-                <img src="../images/robotica.jfif" alt="Robótica" class="image">
+                <img src="../images/robotica.jfif" alt="Imagem de um carrinho controlado por Bluetooth" class="image">
                 <img src="../svg/red_spot.svg" alt="Mancha vermelha" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/terrario.jpeg" alt="aniversario_tematico" class="image">
+                <img src="../images/terrario.jpeg" alt="Imagem de uma oficina de plantio" class="image">
                 <img src="../svg/orange_spot.svg" alt="Mancha laranja" class="asset">
             </div>
 
@@ -308,9 +336,9 @@
             </div>
         </section>
 
-    </main>
+        <!-- Fim do Conteúdo Principal -->
 
-    <!-- End of Content -->
+    </main>
 
     <footer>
         <div class="wrapper">

@@ -181,8 +181,7 @@ nav.desktop ul li a:hover {
   transform: rotate(180deg);
 }
 
-/* Menu */
-
+/* Menu Mobile */
 .menu {
   display: none;
   flex-direction: column;
@@ -195,24 +194,35 @@ nav.desktop ul li a:hover {
 }
 
 nav.mobile {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
   background-image: linear-gradient(45deg, #3E4096, #8DA5ED);
-  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   align-items: center;
   justify-content: center;
   z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
+
+nav.mobile.show {
+  transform: translateX(0);
+}
+
+.custom-select.hidden {
+  display: none;
+}
+
 
 .close-icon {
   position: fixed;
   top: 32px;
-  right: 5vw;
+  right: 10vw;
   width: 40px;
   cursor: pointer;
 }
@@ -223,7 +233,7 @@ nav.mobile ul {
 }
 
 nav.mobile ul li {
-  margin: 30px 0;
+  margin: 10px 0;
   text-align: center;
   position: relative;
   display: flex;
@@ -235,7 +245,7 @@ nav.mobile ul li {
 
 nav.mobile ul li a {
   font-family: "Luckiest Guy", sans-serif;
-  font-size: 26px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
@@ -261,6 +271,7 @@ nav.mobile ul li a:hover {
   flex-direction: row;
 }
 
+/* Dropdown */
 nav.mobile .dropdown-content {
   display: none;
   left: 3vw;
@@ -271,20 +282,17 @@ nav.mobile .dropdown-content {
   border-radius: 20px;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.8);
-  /* background-image: linear-gradient(45deg, #3E4096, #8DA5ED); */
-}
-
-nav.mobile .dropdown-content a {
-  padding: 0;
-}
-
-nav.mobile .dropdown-content::after {
-  height: 0;
 }
 
 nav.mobile .dropdown-content.active {
   display: flex;
   align-self: center;
+}
+
+.custom-select.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 /* Footer */

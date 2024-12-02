@@ -117,9 +117,35 @@
 
     <!-- Fim da Navbar -->
 
-
-
     <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <!-- Começo do Conteúdo Principal -->
+
         <section class="title">
             <h1>Sociais</h1>
         </section>
@@ -140,14 +166,14 @@
             </div>
 
             <div class="right">
-                <img src="../images/recreacao_image.png" alt="Recreação" class="image">
+                <img src="../images/recreacao_image.png" alt="Imagem de recreação na quadra" class="image">
                 <img src="../svg/red_spot.svg" alt="Mancha vermelha" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/aniversario_tematico_image.png" alt="Aniversário Temático" class="image">
+                <img src="../images/aniversario_tematico_image.png" alt="Imagem de um aniversário temático em um salão" class="image">
                 <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
             </div>
 
@@ -176,9 +202,10 @@
                 projetadas para entreter, educar e desenvolver habilidades sociais e motoras de maneira lúdica.
             </p>
         </section>
-    </main>
 
-    <!-- End of Content -->
+        <!-- Fim do Conteúdo Principal -->
+
+    </main>
 
     <footer>
         <div class="wrapper">

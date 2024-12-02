@@ -114,32 +114,34 @@
 
     </header>
 
-    <!-- Começo do Conteúdo Principal -->
-
-    <svg width="0" height="0">
-        <defs>
-            <filter id="protanopia">
-                <feColorMatrix type="matrix"
-                    values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
-            </filter>
-            <filter id="deuteranopia">
-                <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
-            </filter>
-            <filter id="tritanopia">
-                <feColorMatrix type="matrix"
-                    values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
-            </filter>
-        </defs>
-    </svg>
-
-    <select id="daltonismo">
-        <option value="">Padrão</option>
-        <option value="protanopia">Protanopia</option>
-        <option value="deuteranopia">Deuteranopia</option>
-        <option value="tritanopia">Tritanopia</option>
-    </select>
-
     <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <!-- Começo do Conteúdo Principal -->
 
         <section class="title">
             <h1>Passatempo Eventos</h1>
@@ -162,13 +164,23 @@
             </div>
 
             <div class="right">
-                <img src="../images/home_image.png" alt="Passatempo Eventos" class="image">
+                <div class="carrossel">
+                    <div class="carrossel-images">
+                        <img src="../images/home_image.png" alt="Imagem">
+                        <img src="../images/home_image_2.jpeg" alt="Imagem 2">
+                        <img src="../images/home_image_3.jpeg" alt="Imagem 3">
+                    </div>
+                    <button class="prev" aria-label="Imagem anterior">&#10094;</button>
+                    <button class="next" aria-label="Próxima imagem">&#10095;</button>
+                </div>
+                
                 <img src="../svg/orange_spot.svg" alt="Mancha" class="asset">
             </div>
         </section>
-    </main>
 
-    <!-- Fim do Conteúdo Principal -->
+        <!-- Fim do Conteúdo Principal -->
+
+    </main>
 
     <footer>
         <div class="wrapper">

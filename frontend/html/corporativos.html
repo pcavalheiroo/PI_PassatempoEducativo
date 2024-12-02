@@ -118,6 +118,34 @@
     <!-- Fim da Navbar -->
 
     <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <!-- Começo do Conteúdo Principal -->
+
         <section class="title">
             <h1>Corporativos</h1>
         </section>
@@ -140,14 +168,14 @@
             </div>
 
             <div class="right">
-                <img src="../images/community_day.png" alt="Community Day" class="image">
+                <img src="../images/community_day.png" alt="Imagem do Community Day em uma sala de aula" class="image">
                 <img src="../svg/yellow_spot.svg" alt="Mancha amarela" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/game2020.jpg" alt="Game 2030" class="image">
+                <img src="../images/game2020.jpg" alt="Imagem explicativa sobre o Game 2030" class="image">
                 <img src="../svg/red_spot.svg" alt="Mancha vermelha" class="asset">
             </div>
 
@@ -184,14 +212,14 @@
             </div>
 
             <div class="right">
-                <img src="../images/kids_day.png" alt="Kids Day" class="image">
+                <img src="../images/kids_day.png" alt="Imagem de um grupo de crianças no Kids Day" class="image">
                 <img src="../svg/orange_spot.svg" alt="Mancha laranja" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/aniversario_tematico.jpeg" alt="aniversario_tematico" class="image">
+                <img src="../images/leilao_tematico.jpeg" alt="Imagem de crianças participando de um leilão temático" class="image">
                 <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
             </div>
 
@@ -231,7 +259,7 @@
                 <p id="space_room_p">
                     O "Scape Room" é uma atividade estratégica e engajadora que visa fortalecer as habilidades da
                     equipe, promover o trabalho em conjunto e desenvolver a resolução de problemas de maneira
-                    colaborativa.Os participantes são desafiados a resolver enigmas e superar obstáculos dentro de um
+                    colaborativa. Os participantes são desafiados a resolver enigmas e superar obstáculos dentro de um
                     ambiente temático, simulando situações complexas. Ao participar do Escape Room, os colaboradores têm
                     a oportunidade de aprimorar competências, além disso, a natureza desafiadora da atividade estimula a
                     criatividade e a resiliência, elementos cruciais para o sucesso em um ambiente empresarial dinâmico.
@@ -241,14 +269,14 @@
             </div>
 
             <div class="right">
-                <img src="../images/space_room.jpeg" alt="Scape Room" class="image">
+                <img src="../images/space_room.jpeg" alt="Imagens de jovens resolvendo um enigma do Scape Room" class="image">
                 <img src="../svg/orange_spot.svg" alt="Mancha laranja" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/teatro.png" alt="Teatro" class="image">
+                <img src="../images/teatro.png" alt="Imagem de uma equipe de teatro com o tema Chaves" class="image">
                 <img src="../svg/red_spot.svg" alt="Mancha vermelha" class="asset">
             </div>
 
@@ -282,9 +310,9 @@
             </p>
         </section>
 
-    </main>
+        <!-- Fim do Conteúdo Principal -->
 
-    <!-- End of Content -->
+    </main>
 
     <footer>
         <div class="wrapper">

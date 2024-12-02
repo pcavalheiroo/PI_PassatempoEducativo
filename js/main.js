@@ -39,27 +39,30 @@ document.addEventListener('click', function (e) {
   });
 });
 
+
+
 // Menu Mobile
+
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.querySelector("nav.mobile");
   const closeIcon = document.querySelector(".close-icon");
   const menuIcon = document.querySelector("#menu-icon");
+  const daltonismoSelector = document.querySelector("#daltonismo");
 
   menuIcon.addEventListener("click", function (event) {
-    event.stopPropagation();
-    mobileMenu.style.display = "flex";
+      event.stopPropagation();
+      mobileMenu.classList.add("show");
+      if (daltonismoSelector) {
+          daltonismoSelector.style.display = "none";
+      }
   });
 
-  // Fechar o menu mobile ao clicar no ícone de fechar
-  closeIcon.addEventListener("click", function () {
-    mobileMenu.style.display = "none";
-  });
-
-  // Fechar o menu ao clicar fora do menu
-  document.addEventListener("click", function (e) {
-    if (!mobileMenu.contains(e.target) && e.target !== menuIcon) {
-      mobileMenu.style.display = "none";
-    }
+  closeIcon.addEventListener("click", function (event) {
+      event.stopPropagation();
+      mobileMenu.classList.remove("show");
+      if (daltonismoSelector) {
+          daltonismoSelector.style.display = "";
+      }
   });
 
   const dropdownMobile = document.querySelector("nav.mobile .dropdown");
@@ -67,19 +70,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownContentMobile = dropdownMobile.querySelector(".dropdown-content");
   const arrowIconMobile = dropdownMobile.querySelector('.arrow-icon');
 
-  // Abrir/fechar o dropdown
   dropdownBtnMobile.addEventListener("click", function (event) {
-    event.preventDefault();
-    dropdownContentMobile.classList.toggle("active");
-    if (dropdownContentMobile.classList.contains('active')) {
-      arrowIconMobile.style.transform = 'rotate(180deg)';
-    } else {
-      arrowIconMobile.style.transform = 'rotate(0deg)'; // Reseta
-    }
+      event.preventDefault();
+      dropdownContentMobile.classList.toggle("active");
+      if (dropdownContentMobile.classList.contains('active')) {
+          arrowIconMobile.style.transform = 'rotate(180deg)';
+      } else {
+          arrowIconMobile.style.transform = 'rotate(0deg)';
+      }
   });
 });
 
+
+
 // Daltonismo
+
 const daltonismoSelect = document.getElementById('daltonismo');
 
 daltonismoSelect.addEventListener('change', function () {
@@ -89,4 +94,55 @@ daltonismoSelect.addEventListener('change', function () {
   if (selectedValue) {
     document.body.classList.add(selectedValue);
   }
+});
+
+
+
+// Carrossel
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carrossel = document.querySelector(".carrossel-images");
+  const images = document.querySelectorAll(".carrossel-images img");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+
+  let index = 0;
+  const intervalTime = 3000;
+  let autoSlide;
+
+  function updateCarrossel() {
+    const offset = -index * 100;
+    carrossel.style.transform = `translateX(${offset}%)`;
+  }
+
+  function showNextImage() {
+    index = (index + 1) % images.length;
+    updateCarrossel();
+  }
+
+  function startAutoSlide() {
+    autoSlide = setInterval(showNextImage, intervalTime);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+  }
+
+  prevButton.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    updateCarrossel();
+    resetAutoSlide();
+  });
+
+  nextButton.addEventListener("click", () => {
+    showNextImage();
+    resetAutoSlide();
+  });
+
+  // Pausa o auto-slide ao passar o mouse sobre o carrossel
+  carrossel.addEventListener("mouseenter", () => clearInterval(autoSlide));
+  carrossel.addEventListener("mouseleave", startAutoSlide);
+
+  startAutoSlide();
 });

@@ -6,10 +6,16 @@ document.getElementById('loginButton').addEventListener('click', async () => {
     const login = emailInput.value;
     const password = passwordInput.value;
 
+    // Função para atualizar o alerta com a mensagem e a classe correta
+    function atualizarAlerta(mensagem, classe) {
+        alertDiv.textContent = mensagem;
+        alertDiv.className = `alert ${classe}`; // Remove outras classes e adiciona a nova
+        alertDiv.classList.remove('d-none'); // Certifique-se de que o alerta está visível
+    }
+
+    // Validação de campos vazios
     if (!login || !password) {
-        alertDiv.textContent = 'Por favor, preencha todos os campos.';
-        alertDiv.classList.remove('d-none');
-        alertDiv.classList.add('alert-danger');
+        atualizarAlerta('Por favor, preencha todos os campos.', 'alert-warning');
         return;
     }
 
@@ -39,21 +45,13 @@ document.getElementById('loginButton').addEventListener('click', async () => {
                 painelLink.style.display = 'inline';
             }
 
-            alertDiv.textContent = 'Login realizado com sucesso!';
-            alertDiv.classList.remove('alert-danger');
-            alertDiv.classList.add('alert-success');
+            atualizarAlerta('Login realizado com sucesso!', 'alert-success');
         } else {
             const errorData = await response.json();
-            alertDiv.textContent = errorData.mensagem || 'Erro ao fazer login.';
-            alertDiv.classList.remove('alert-success');
-            alertDiv.classList.add('alert-danger');
+            atualizarAlerta(errorData.mensagem || 'Erro ao fazer login.', 'alert-error');
         }
     } catch (error) {
-        alertDiv.textContent = 'Erro na comunicação com o servidor.';
-        alertDiv.classList.remove('alert-success');
-        alertDiv.classList.add('alert-danger');
+        atualizarAlerta('Erro na comunicação com o servidor.', 'alert-error');
         console.error(error);
-    } finally {
-        alertDiv.classList.remove('d-none');
     }
 });

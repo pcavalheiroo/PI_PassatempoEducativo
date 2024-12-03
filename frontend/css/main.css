@@ -454,7 +454,8 @@ h2 a:hover {
 }
 
 .alert {
-  font-family: "Luckiest Guy";
+  font-family: "ubuntu";
+  font-weight: bold;
   font-size: 16px;
   text-align: center;
   padding: 15px;

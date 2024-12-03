@@ -2,10 +2,10 @@
 
 ## Membros
 
-- Dante Fernandes Silva Lima - RA: 24.00074-4
-- Giovanna Dias da Silva - RA: 24.01797-3
-- Pedro Stanziani Cavalheiro - RA: 24.01648-9
-- Raissa Mantovani Andrade Duarte - RA: 24.00096-5
+- Dante Fernandes Silva Lima - RA: 24.00074-4 (programador backend)
+- Giovanna Dias da Silva - RA: 24.01797-3 (realizou a documentação)
+- Pedro Stanziani Cavalheiro - RA: 24.01648-9 (programador frontend e backend)
+- Raissa Mantovani Andrade Duarte - RA: 24.00096-5 (realizou a documentação)
 
 ## Descrição
 

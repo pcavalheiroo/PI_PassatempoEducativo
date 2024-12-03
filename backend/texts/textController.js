@@ -2,10 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Text = require('./textModel');
 
-/**
- * CREATE - Adicionar um novo texto ao banco
- * Endpoint: POST /texts
- */
+// CREATE - Adicionar um novo texto ao banco
+
 router.post('/', async (req, res) => {
     const { _id, h1, p } = req.body;
 
@@ -19,10 +17,9 @@ router.post('/', async (req, res) => {
     }
 });
 
-/**
- * READ - Buscar todos os textos
- * Endpoint: GET /texts
- */
+
+// READ - Buscar todos os textos
+
 router.get('/', async (req, res) => {
     try {
         const texts = await Text.find();
@@ -33,10 +30,9 @@ router.get('/', async (req, res) => {
     }
 });
 
-/**
- * READ - Buscar um texto específico pelo ID
- * Endpoint: GET /texts/:id
- */
+
+// READ - Buscar texto pelo ID
+
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
 
@@ -52,10 +48,8 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-/**
- * UPDATE - Atualizar um texto pelo ID
- * Endpoint: PUT /texts/:id
- */
+// UPDATE - Atualizar texto pelo ID
+
 router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const { h1, p } = req.body;
@@ -76,10 +70,9 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-/**
- * DELETE - Remover um texto pelo ID
- * Endpoint: DELETE /texts/:id
- */
+
+// DELETE - Remover texto pelo ID
+
 router.delete('/:id', async (req, res) => {
     const { id } = req.params;
 

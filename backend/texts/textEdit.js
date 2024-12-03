@@ -108,7 +108,6 @@ const sections = [
     'estacao_fitness'
 ];
 
-// Associar um manipulador de eventos para salvar cada seção
 sections.forEach(section => {
     const button = document.getElementById(`saveText-${section}`); // Botão específico para cada seção
     if (button) {

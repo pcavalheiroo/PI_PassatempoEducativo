@@ -1,17 +1,22 @@
-const Text = require("../../services/texts/texts.model");
+const Text = require("./textModel");
 
 class TextRepository {
 
 
   async create(data) {
-    const newText = new Text({
-      _id: data.id,
-      h1: data.h1,
-      p: data.p
-    });
-    await newText.save();
-    return
-  }
+    try {
+      const newText = new Text({
+        _id: data.id,
+        h1: data.h1,
+        p: data.p
+      });
+      await newText.save();
+      return newText;
+    } catch (error) {
+      console.error("Erro ao criar texto:", error.message);
+      throw new Error("Falha ao criar o texto");
+    }
+  }  
 
   async findAll() {
     const allTexts = await Text.find({});

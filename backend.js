@@ -1,112 +1,88 @@
 const express = require('express')
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
+const cors = require('cors')
 const mongoose = require('mongoose')
+const uniqueValidator = require('mongoose-unique-validator')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+const textController = require('./texts/textController')
+const app = express()
+app.use(express.json())
+app.use(cors())
 
-// Definindo o modelo de Usuário
-const UsuarioSchema = new mongoose.Schema({
-  login: { type: String, required: true },
-  password: { type: String, required: true },
-  isAdmin: { type: Boolean, default: false },
+//Schema
+const usuarioSchema = mongoose.Schema({
+  login: { type: String, required: true, unique: true },
+  password: { type: String, required: true }
 })
 
-const Usuario = mongoose.model('Usuario', UsuarioSchema)
+usuarioSchema.plugin(uniqueValidator)
+const Usuario = mongoose.model("Usuario", usuarioSchema)
 
-const app = express()
-app.use(express.json()) // Para poder ler JSON
-
-// Conexão com o MongoDB
-mongoose.connect('mongodb://localhost:30000/admin', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Conectado ao MongoDB'))
-  .catch((err) => console.error('Erro na conexão com o MongoDB:', err))
-
-// Rota para configurar o usuário admin
-app.post('/setup-admin', async (req, res) => {
-  const login = 'admin'
-  const password = 'admin'
-
+//conexão MongoDB
+async function conectarAoMongo() {
   try {
-    // Verifica se o usuário já existe
-    let usuario = await Usuario.findOne({ login: login })
-    
-    if (!usuario) {
-      // Caso o usuário não exista, cria um novo
-      const passwordCriptografada = await bcrypt.hash(password, 10)
-      usuario = new Usuario({ login: login, password: passwordCriptografada, isAdmin: true })
-      await usuario.save()
-      return res.status(201).json({ mensagem: 'Usuário admin criado e promovido a administrador!' })
-    } else {
-      // Caso o usuário já exista, atualiza para admin
-      usuario.isAdmin = true
-      await usuario.save()
-      return res.status(200).json({ mensagem: 'Usuário admin promovido a administrador!' })
-    }
-  } catch (e) {
-    console.error(e)
-    return res.status(500).json({ mensagem: 'Erro ao configurar admin' })
+    await mongoose.connect(`mongodb+srv://dantefernandessilvalima:Pardo123@cluster0.cpeu3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
+
+    console.log("Conexão com MongoDB estabelecida com sucesso");
+  }
+
+  catch (e) {
+    console.error("Erro ao conectar ao MongoDB:", e);
+    process.exit(1);
+  }
+}
+
+app.use('/texts', textController)
+
+app.post('/signup', async (req, res) => {
+  try {
+    const login = req.body.login
+    const password = req.body.password
+    const passwordCriptografada = await bcrypt.hash(password, 10)
+    const usuario = new Usuario({ login: login, password: passwordCriptografada })
+    const respMongo = await usuario.save()
+    console.log(respMongo)
+    res.status(201).end()
+  }
+  catch (e) {
+    console.log(e)
+    res.status(409).end()
   }
 })
 
-// Rota de login com autenticação
 app.post('/login', async (req, res) => {
   const { login, password } = req.body
 
-  // Verifica se o usuário existe
-  const usuario = await Usuario.findOne({ login: login })
-  if (!usuario) {
-    return res.status(401).json({ mensagem: 'Login inválido' })
+  const usuarioExiste = await Usuario.findOne({ login: login })
+  if (!usuarioExiste) {
+    return res.status(401).json({ mensagem: "Login inválido" })
   }
 
-  // Verifica se a senha está correta
-  const passwordValida = await bcrypt.compare(password, usuario.password)
+  const passwordValida = await bcrypt.compare(password, usuarioExiste.password)
+
   if (!passwordValida) {
-    return res.status(401).json({ mensagem: 'Senha inválida' })
+    return res.status(401).json({ mensagem: "Senha inválida" })
   }
 
-  // Gera o token de autenticação com o campo isAdmin
+  // Verificar se é o administrador
+  const isAdmin = login === 'admin' && passwordValida;
+
   const token = jwt.sign(
-    { login: usuario.login, isAdmin: usuario.isAdmin },
-    'chave-segura', // Substitua por uma chave mais segura
-    { expiresIn: '1h' }
+    { login, isAdmin },
+    "chave-segura",
+    { expiresIn: "1h" }
   )
 
   return res.status(200).json({ token: token })
 })
 
-// Middleware para verificar se o usuário tem acesso à área restrita
-const verificarAdmin = (req, res, next) => {
-  const token = req.header('Authorization')?.replace('Bearer ', '')
-  if (!token) {
-    return res.status(401).json({ mensagem: 'Acesso não autorizado' })
-  }
 
-  try {
-    // Verifica o token
-    const decoded = jwt.verify(token, 'chave-segura') // Use a chave secreta que você definiu
-    req.usuario = decoded
-
-    // Verifica se é administrador
-    if (!req.usuario.isAdmin) {
-      return res.status(403).json({ mensagem: 'Acesso restrito a administradores' })
-    }
-
-    next()
-  } catch (e) {
-    return res.status(401).json({ mensagem: 'Token inválido' })
-  }
-}
-
-// Rota de área restrita (exemplo)
-app.get('/admin', verificarAdmin, (req, res) => {
-  res.status(200).json({ mensagem: 'Bem-vindo à área restrita de administradores!' })
-})
-
-// Rota de exemplo para usuário comum
-app.get('/user', (req, res) => {
-  res.status(200).json({ mensagem: 'Bem-vindo, usuário!' })
-})
-
-// Inicia o servidor na porta 3000
 app.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000')
+  try {
+    conectarAoMongo()
+    console.log("Servidor em execução e conexão com o banco OK");
+  }
+  catch (e) {
+    console.log('Erro de conexão:', e)
+  }
 })

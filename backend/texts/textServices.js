@@ -16,7 +16,7 @@ class TextRepository {
       console.error("Erro ao criar texto:", error.message);
       throw new Error("Falha ao criar o texto");
     }
-  }  
+  }
 
   async findAll() {
     const allTexts = await Text.find({});
@@ -29,15 +29,16 @@ class TextRepository {
   }
 
   async remove(id) {
-    await Text.findByIdAndDelete(id)
-    return
+    const text = await Text.findById(id);
+    if (!text) throw new Error("Texto não encontrado");
+    await Text.findByIdAndDelete(id);
+    return { message: "Texto deletado com sucesso" };
   }
 
   async update(id, newH1, newP) {
     const updatedText = await Text.findByIdAndUpdate(
       id,
-      { h1: newH1 },
-      { p: newP },
+      { h1: newH1, p: newP },
       { new: true }
     );
     return updatedText;

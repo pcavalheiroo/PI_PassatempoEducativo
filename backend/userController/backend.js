@@ -8,6 +8,7 @@ const textController = require('../texts/textController')
 const app = express()
 app.use(express.json())
 app.use(cors())
+app.use('/texts', textController)
 
 //Schema
 const usuarioSchema = mongoose.Schema({
@@ -76,13 +77,6 @@ app.post('/login', async (req, res) => {
   return res.status(200).json({ token: token })
 })
 
-
 app.listen(3000, () => {
-  try {
-    conectarAoMongo()
-    console.log("Servidor em execução e conexão com o banco OK");
-  }
-  catch (e) {
-    console.log('Erro de conexão:', e)
-  }
-})
+  conectarAoMongo()
+});

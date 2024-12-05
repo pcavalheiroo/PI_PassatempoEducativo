@@ -1,12 +1,15 @@
+// Evento ao botão Login
 document.getElementById('loginButton').addEventListener('click', async () => {
+    // Leitura dos campos
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const alertDiv = document.querySelector('.alert');
 
+    // Leitura dos valores inseridos
     const login = emailInput.value;
     const password = passwordInput.value;
 
-    // Alertas
+    // Função para atualizar alertas
     function atualizarAlerta(mensagem, classe) {
         alertDiv.textContent = mensagem;
         alertDiv.className = `alert ${classe}`;

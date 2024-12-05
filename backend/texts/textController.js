@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Text = require('./textModel');
+const Text = require('./textModel')
 
 // CREATE - Adicionar um novo texto ao banco
 

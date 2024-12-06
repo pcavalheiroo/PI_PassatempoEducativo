@@ -4,13 +4,13 @@
   display: flex;
   border-radius: 20px;
   background-color: #FFBD57;
-  height: 120px;
-  margin-top: 70px;
+  height: 80px;
+  margin-top: 35px;
 }
 
 .title h1 {
   font-family: "Luckiest Guy";
-  font-size: 70px;
+  font-size: 40px;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -22,13 +22,13 @@
   display: flex;
   border-radius: 20px 20px 0px 0px;
   background-color: #FFBD57;
-  height: 120px;
-  margin-top: 70px;
+  height: 80px;
+  margin-top: 35px;
 }
 
 .title_con h1 {
   font-family: "Luckiest Guy";
-  font-size: 70px;
+  font-size: 40px;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -45,22 +45,71 @@
   border-radius: 0px 0px 20px 20px;
   background: rgba(255, 255, 255, 0.80);
   margin-top: 0;
-  padding: 40px;
+  padding: 30px;
   flex-wrap: wrap;
 }
 
 .subtitle p {
   font-family: Ubuntu;
-  font-size: 22px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 130%;
   text-align: center;
   justify-content: center;
   align-self: center;
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+/* Carrossel */
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.carrossel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-images img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
 }
 
 /* Conteúdo Tipo 1 */
@@ -72,15 +121,15 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.80);
-  margin-top: 70px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 50px;
   padding: 40px;
   flex-wrap: wrap;
 }
 
 .box_1 .left h1 {
   font-family: "Luckiest Guy";
-  font-size: 50px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -91,10 +140,10 @@
 
 .box_1 .left p {
   font-family: Ubuntu;
-  font-size: 22px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 130%;
 }
 
 .box_1 .left {
@@ -111,8 +160,8 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 20px;
   max-width: 100%;
-  padding-right: 30px;
   z-index: 10;
 }
 
@@ -121,6 +170,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 60%;  
   width: 120%;
   height: auto;
   z-index: 1;
@@ -136,7 +186,7 @@
   justify-content: space-between;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 70px;
+  margin-top: 50px;
   padding: 40px;
   flex-wrap: wrap;
 }
@@ -153,7 +203,7 @@
   height: auto;
   object-fit: cover;
   max-width: 100%;
-  padding-right: 30px;
+  border-radius: 20px;
   z-index: 10;
 }
 
@@ -162,6 +212,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 60%;
   width: 120%;
   height: auto;
   z-index: 1;
@@ -169,7 +220,7 @@
 
 .box_2 .right h1 {
   font-family: "Luckiest Guy";
-  font-size: 50px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -180,10 +231,10 @@
 
 .box_2 .right p {
   font-family: Ubuntu;
-  font-size: 22px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 130%;
 }
 
 .box_2 .right {
@@ -202,7 +253,7 @@
   height: auto;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 70px;
+  margin-top: 50px;
   padding: 40px;
   position: relative;
   overflow: hidden;
@@ -211,7 +262,7 @@
 
 .box_3 h1 {
   font-family: "Luckiest Guy";
-  font-size: 50px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -226,10 +277,10 @@
 
 .box_3 p {
   font-family: Ubuntu;
-  font-size: 22px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 130%;
   text-align: center;
   justify-content: center;
   align-self: center;
@@ -306,9 +357,9 @@ h2 a:hover {
   justify-content: space-between;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.80);
-  margin-top: 0;
   padding: 40px;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 .contato-content img {
@@ -341,17 +392,18 @@ h2 a:hover {
 }
 
 .textfield label {
-  font-size: 2.5vw;
+  font-size: 2vw;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .textfield input {
   display: flex;
   border-radius: 20px;
-  width: 500px;
+  width: 35vw;
   padding: 15px;
   font-family: Ubuntu;
-  font-size: 22px;
+  font-size: 16px;
   font-style: normal;
   outline: none;
   box-sizing: border-box;
@@ -366,7 +418,7 @@ h2 a:hover {
   border-radius: 20px;
   background-color: var(--yellow);
   font-family: "Luckiest Guy";
-  font-size: 4vw;
+  font-size: 3vw;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 800;
@@ -391,10 +443,75 @@ h2 a:hover {
 ::placeholder {
   display: flex;
   font-family: Ubuntu;
-  font-size: 22px;
+  font-size: 16px;
   font-style: normal;
   align-items: center;
   padding-left: 0px;
+}
+
+.d-none{
+  display: none;
+}
+
+.alert {
+  font-family: "ubuntu";
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.alert-success {
+  background-color: #16ce41;
+}
+
+.alert-error {
+  background-color: #E05A5A;
+}
+
+.alert-warning {
+  background-color: #FFBD57;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.d-none{
+  display: none;
+}
+
+/* Painel de Textos */
+
+.edit-area {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.title-edit {
+  display: flex;
+  border-radius: 20px;
+  background-color: #E68183;
+  width: 40vw;
+  height: 80px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.title-edit h1 {
+  font-family: "Luckiest Guy";
+  font-size: 40px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
 }
 
 /* Media Query */
@@ -425,6 +542,10 @@ h2 a:hover {
     padding-right: 0;
     max-width: 80%;
     margin: 40px 20px;
+  }
+
+  .carrossel-images {
+    margin: 40px 0px;
   }
 
   .box_1 .right .asset, .box_2 .left .asset {
@@ -520,16 +641,16 @@ h2 a:hover {
   }
 
   .btn-login {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
 
 @media (max-width: 800px) {
-  .title, .title_con {
+  .title, .title_con, .title-edit {
     height: 100px;
   }
 
-  .title h1, .title_con h1 {
+  .title h1, .title_con h1, .title-edit h1 {
     font-size: 30px;
   }
 
@@ -578,16 +699,16 @@ h2 a:hover {
   }
 
   .btn-login {
-    font-size: 7vw;
+    font-size: 3vw;
   }
 }
 
 @media (max-width: 320px) {
-  .title, .title_con {
+  .title, .title_con, .title-edit {
     height: 70px;
   }
 
-  .title, .title_con h1 {
+  .title, .title_con h1, .title-edit h1 {
     font-size: 20px;
   }
 

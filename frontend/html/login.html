@@ -63,8 +63,13 @@
                     </li>
 
                     <li>
-                        <a href="login.html">Login</a>
+                        <a href="login.html" id="loginLink">Login</a>
                     </li>
+
+                    <li>
+                        <a href="texts.html" id="painelLink" style="display: none;">Painel</a>
+                    </li>
+                    
                 </ul>
 
                 <!-- Ícone de menu -->
@@ -82,7 +87,7 @@
                     <li>
                         <a href="home.html">Home</a>
                     </li>
-    
+
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Eventos
                             <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
@@ -92,22 +97,27 @@
                             <a href="corporativos.html">Corporativos</a>
                         </div>
                     </li>
-    
+
                     <li>
                         <a href="oficinas.html">Oficinas</a>
                     </li>
-    
+
                     <li>
                         <a href="saude.html">Saúde e Bem Estar</a>
                     </li>
-    
+
                     <li>
                         <a href="contato.html">Contato</a>
                     </li>
-    
+
                     <li>
-                        <a href="login.html">Login</a>
+                        <a href="login.html" id="loginLink">Login</a>
                     </li>
+
+                    <li>
+                        <a href="texts.html" id="painelLink" style="display: none;">Painel</a>
+                    </li>
+                    
                 </ul>
             </nav>
 
@@ -118,6 +128,34 @@
     <!-- Fim da Navbar -->
 
     <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <!-- Começo do Conteúdo Principal -->
+
         <section>
             <div class="title">
                 <h1>
@@ -128,31 +166,29 @@
 
         <section class="box_3">
 
-            <img src="../svg/orange_wave.svg" alt="Onda laranja" class="orange_wave" style="top: 0; left: 0; transform: rotate(180deg);">
+            <img src="../svg/orange_wave.svg" alt="Onda laranja" class="orange_wave"
+                style="top: 0; left: 0; transform: rotate(180deg);">
             <img src="../svg/orange_wave.svg" alt="Onda laranja" class="orange_wave" style="bottom: 0; right: 0;">
 
             <div class="textfield">
-                <label for="email">E-mail:</label>
+                <label for="email">Usuário:</label>
                 <input type="email" id="email" name="e-mail" placeholder="Digite seu e-mail..." required>
             </div>
 
             <div class="textfield">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha..." required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha..." required>
             </div>
 
             <button type="submit" class="btn" id="loginButton">Login</button>
 
-            <p style="margin: 30px;">
-                Deseja cadastrar um novo administrador? <br> <br>
-                <a href="cadastro.html">Clique aqui e faça o seu cadastro!</a>
-            </p>
-            
+            <div class="alert d-none"></div>
+
         </section>
 
-    </main>
+        <!-- Fim do Conteúdo Principal -->
 
-    <!-- End of Content -->
+    </main>
 
     <footer>
         <div class="wrapper">
@@ -178,7 +214,20 @@
         </div>
     </footer>
 
-    <script src="../../js/main.js" defer></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../../backend/userController/login.js" defer></script>
+    <script src="../../backend/userController/backend.js"></script>
+    <script src="../main.js"></script>
 </body>
 
 </html>

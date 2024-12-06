@@ -65,6 +65,11 @@
                     <li>
                         <a href="login.html">Login</a>
                     </li>
+                    
+                    <li>
+                        <a href="texts.html" id="painelLink" style="display: none;">Painel</a>
+                    </li>
+                    
                 </ul>
 
                 <!-- Ícone de menu -->
@@ -82,7 +87,7 @@
                     <li>
                         <a href="home.html">Home</a>
                     </li>
-    
+
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Eventos
                             <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
@@ -92,19 +97,19 @@
                             <a href="corporativos.html">Corporativos</a>
                         </div>
                     </li>
-    
+
                     <li>
                         <a href="oficinas.html">Oficinas</a>
                     </li>
-    
+
                     <li>
                         <a href="saude.html">Saúde e Bem Estar</a>
                     </li>
-    
+
                     <li>
                         <a href="contato.html">Contato</a>
                     </li>
-    
+
                     <li>
                         <a href="login.html">Login</a>
                     </li>
@@ -118,6 +123,34 @@
     <!-- Fim da Navbar -->
 
     <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <!-- Começo do Conteúdo Principal -->
+
         <section>
             <div class="title_con">
                 <h1>
@@ -126,160 +159,192 @@
             </div>
             <div class="subtitle">
                 <p>
-                    Com uma variedade de materiais coloridos e ferramentas divertidas, nossas oficinas proporcionam um ambiente estimulante e acolhedor para que as crianças possam se expressar livremente. Valorizamos a diversidade de ideias e incentivamos a experimentação, sempre celebrando a singularidade de cada pequeno artista. Aqui, o aprendizado acontece de forma lúdica e significativa, promovendo o desenvolvimento criativo e emocional de forma encantadora.
+                    Com uma variedade de materiais coloridos e ferramentas divertidas, nossas oficinas proporcionam um
+                    ambiente estimulante e acolhedor para que as crianças possam se expressar livremente. Valorizamos a
+                    diversidade de ideias e incentivamos a experimentação, sempre celebrando a singularidade de cada
+                    pequeno artista. Aqui, o aprendizado acontece de forma lúdica e significativa, promovendo o
+                    desenvolvimento criativo e emocional de forma encantadora.
                 </p>
             </div>
         </section>
 
         <section class="box_1">
             <div class="left">
-                <h1>
+                <h1 id="batalha_nerf_h1">
                     Batalha Nerf
                 </h1>
 
-                <p>
-                    Promover a diversão, o exercício físico, o trabalho em equipe, e o desenvolvimento de habilidades estratégicas e motoras, utilizando as pistolas Nerf em jogos organizados e seguros. Cenário de campo de batalha, equipamentos e regras de segurança.
+                <p id="batalha_nerf_p">
+                    Promover a diversão, o exercício físico, o trabalho em equipe, e o desenvolvimento de habilidades
+                    estratégicas e motoras, utilizando as pistolas Nerf em jogos organizados e seguros. Cenário de campo
+                    de batalha, equipamentos e regras de segurança.
                 </p>
             </div>
 
             <div class="right">
-                <img src="../images/recreacao_image.png" alt="recreacao" class="image">
+                <img src="../images/batalha_nerf.jpeg" alt="Imagem de uma batalha Nerf na quadra" class="image">
                 <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/aniversario_tematico_image.png" alt="aniversario_tematico" class="image">
+                <img src="../images/bolhas_gigantes.jpeg" alt="Imagem de crianças fazendo bolhas gigantes"
+                    class="image">
                 <img src="../svg/yellow_spot.svg" alt="Mancha amarela" class="asset">
             </div>
 
             <div class="right">
-                <h1>
+                <h1 id="bolhas_gigantes_h1">
                     Bolhas Gigantes
                 </h1>
 
-                <p>
-                    Criar bolhas gigantes é uma atividade que encanta pessoas de todas as idades. A mistura perfeita de água, detergente e um toque de mágica transforma simples bolhas de sabão em verdadeiras obras de arte flutuantes. Imagine o brilho nos olhos das crianças ao verem bolhas enormes pairando no ar, refletindo as cores do arco-íris. É um momento de diversão e admiração que ficará gravado na memória de todos os participantes. Deixe a imaginação fluir e embarque nessa jornada de encanto e magia com a nossa oficina de bolhas gigantes.
-                </p>
-            </div>
-        </section>
-
-        <section class="box_1">
-            <div class="left">
-                <h1>
-                    Catavento
-                </h1>
-
-                <p>
-                    Durante a oficina, as crianças terão a oportunidade de aprender sobre o funcionamento dos cataventos, explorando conceitos de aerodinâmica e energia eólica de forma lúdica e interativa. Com materiais simples e muita criatividade, os participantes poderão construir seu próprio cata-vento e experimentar a sensação de ver a força do vento transformada em movimento.
-                </p>
-            </div>
-
-            <div class="right">
-                <img src="../images/recreacao_image.png" alt="recreacao" class="image">
-                <img src="../svg/red_spot.svg" alt="Mancha vermelho" class="asset">
-            </div>
-        </section>
-
-        <section class="box_2">
-            <div class="left">
-                <img src="../images/aniversario_tematico_image.png" alt="aniversario_tematico" class="image">
-                <img src="../svg/orange_spot.svg" alt="Mancha laranja" class="asset">
-            </div>
-
-            <div class="right">
-                <h1>
-                    Culinária
-                </h1>
-
-                <p>
-                    Elas poderão experimentar pratos deliciosos e se aventurar na cozinha de forma segura e divertida. Com ingredientes coloridos e instruções simples, cada receita foi cuidadosamente planejada para estimular a criatividade e despertar o interesse dos pequenos pela culinária. Cozinhar pode ser uma atividade educativa e prazerosa para as crianças, proporcionando momentos especiais em família e criando memórias afetuosas que serão lembradas com carinho no futuro.
-                </p>
-            </div>
-        </section>
-
-        <section class="box_1">
-            <div class="left">
-                <h1>
-                    Pintura em Tela
-                </h1>
-
-                <p>
-                    Nossa oficina de pintura é um espaço acolhedor e inspirador, onde a criatividade é sempre bem-vinda. Aqui, os artistas podem explorar diferentes técnicas e estilos para dar vida às suas ideias e emoções. Os cavaletes proporcionam a base perfeita para a tela, permitindo que cada pincelada conte uma história única. Cada item na nossa oficina é um convite para a expressão artística e a celebração da beleza que está presente em cada traço e cor. Junte-se a nós e deixe sua imaginação voar, transformando simples tintas em verdadeiras obras de arte.
-                </p>
-            </div>
-
-            <div class="right">
-                <img src="../images/recreacao_image.png" alt="recreacao" class="image">
-                <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
-            </div>
-        </section>
-
-        <section class="box_2">
-            <div class="left">
-                <img src="../images/aniversario_tematico_image.png" alt="aniversario_tematico" class="image">
-                <img src="../svg/yellow_spot.svg" alt="Mancha amarela" class="asset">
-            </div>
-
-            <div class="right">
-                <h1>
-                    Pulseira Macramê
-                </h1>
-
-                <p>
-                    Com diferentes cores de lã e um molde, podemos dar vida a uma pulseira única e cheia de significado. As crianças vão se encantar com a ideia de poder presentear um amigo com algo feito por elas mesmas, repleto de carinho e dedicação. Além de estimular a criatividade, essa atividade promove a amizade e fortalece os laços entre os pequenos. Juntos, eles vão se divertir criando algo especial que certamente será valorizado e apreciado pelo amigo presenteado.
+                <p id="bolhas_gigantes_p">
+                    Criar bolhas gigantes é uma atividade que encanta pessoas de todas as idades. A mistura perfeita de
+                    água, detergente e um toque de mágica transforma simples bolhas de sabão em verdadeiras obras de
+                    arte flutuantes. Imagine o brilho nos olhos das crianças ao verem bolhas enormes pairando no ar,
+                    refletindo as cores do arco-íris. É um momento de diversão e admiração que ficará gravado na memória
+                    de todos os participantes. Deixe a imaginação fluir e embarque nessa jornada de encanto e magia com
+                    a nossa oficina de bolhas gigantes.
                 </p>
             </div>
         </section>
 
         <section class="box_3">
-            <h1>
-                Robótica
+            <h1 id="catavento_h1">
+                Catavento
             </h1>
 
-            <p>
-                Os participantes são encorajados a criar um carrinho controlado por Bluetooth, com a orientação da nossa equipe, para colaborar na construção de forma criativa. Essa atividade não apenas proporciona aprendizado prático em engenharia e tecnologia, mas também fomenta um ambiente de competição saudável e o orgulho de ver o fruto do esforço em equipe.
+            <p id="catavento_p">
+                Durante a oficina, as crianças terão a oportunidade de aprender sobre o funcionamento dos
+                cataventos, explorando conceitos de aerodinâmica e energia eólica de forma lúdica e interativa. Com
+                materiais simples e muita criatividade, os participantes poderão construir seu próprio cata-vento e
+                experimentar a sensação de ver a força do vento transformada em movimento.
+            </p>
+        </section>
+
+        <section class="box_2">
+            <div class="left">
+                <img src="../images/culinaria.png" alt="Imagem da oficina de alfajor" class="image">
+                <img src="../svg/orange_spot.svg" alt="Mancha laranja" class="asset">
+            </div>
+
+            <div class="right">
+                <h1 id="culinaria_h1">
+                    Culinária
+                </h1>
+
+                <p id="culinaria_p">
+                    Elas poderão experimentar pratos deliciosos e se aventurar na cozinha de forma segura e divertida.
+                    Com ingredientes coloridos e instruções simples, cada receita foi cuidadosamente planejada para
+                    estimular a criatividade e despertar o interesse dos pequenos pela culinária. Cozinhar pode ser uma
+                    atividade educativa e prazerosa para as crianças, proporcionando momentos especiais em família e
+                    criando memórias afetuosas que serão lembradas com carinho no futuro.
+                </p>
+            </div>
+        </section>
+
+        <section class="box_1">
+            <div class="left">
+                <h1 id="pintura_tela_h1">
+                    Pintura em Tela
+                </h1>
+
+                <p id="pintura_tela_p">
+                    Nossa oficina de pintura é um espaço acolhedor e inspirador, onde a criatividade é sempre bem-vinda.
+                    Aqui, os artistas podem explorar diferentes técnicas e estilos para dar vida às suas ideias e
+                    emoções. Os cavaletes proporcionam a base perfeita para a tela, permitindo que cada pincelada conte
+                    uma história única. Cada item na nossa oficina é um convite para a expressão artística e a
+                    celebração da beleza que está presente em cada traço e cor. Junte-se a nós e deixe sua imaginação
+                    voar, transformando simples tintas em verdadeiras obras de arte.
+                </p>
+            </div>
+
+            <div class="right">
+                <img src="../images/pintura_tela.png" alt="Imagem de crianças fazendo pinturas em tela" class="image">
+                <img src="../svg/blue_spot.svg" alt="Mancha azul" class="asset">
+            </div>
+        </section>
+
+        <section class="box_2">
+            <div class="left">
+                <img src="../images/pulseira_macrame.png" alt="Imagem de crianças fazendo pulseiras" class="image">
+                <img src="../svg/yellow_spot.svg" alt="Mancha amarela" class="asset">
+            </div>
+
+            <div class="right">
+                <h1 id="pulseira_macrame_h1">
+                    Pulseira Macramê
+                </h1>
+
+                <p id="pulseira_macrame_p">
+                    Com diferentes cores de lã e um molde, podemos dar vida a uma pulseira única e cheia de significado.
+                    As crianças vão se encantar com a ideia de poder presentear um amigo com algo feito por elas mesmas,
+                    repleto de carinho e dedicação. Além de estimular a criatividade, essa atividade promove a amizade e
+                    fortalece os laços entre os pequenos. Juntos, eles vão se divertir criando algo especial que
+                    certamente será valorizado e apreciado pelo amigo presenteado.
+                </p>
+            </div>
+        </section>
+
+        <section class="box_3">
+            <h1 id="slime_h1">
+                Slime
+            </h1>
+
+            <p id="slime_p">
+                A criatividade e diversão se encontram. Com uma oficina de slime, os participantes têm a
+                oportunidade de soltar a imaginação, misturar cores, texturas e criar algo único e especial. É uma
+                atividade que estimula a coordenação motora, a concentração e a interação em grupo, proporcionando
+                momentos de alegria e aprendizado.
             </p>
         </section>
 
         <section class="box_1">
             <div class="left">
-                <h1>
-                    Slime
+                <h1 id="robotica2_h1">
+                    Robótica
                 </h1>
 
-                <p>
-                    A criatividade e diversão se encontram. Com uma oficina de slime, os participantes têm a oportunidade de soltar a imaginação, misturar cores, texturas e criar algo único e especial. É uma atividade que estimula a coordenação motora, a concentração e a interação em grupo, proporcionando momentos de alegria e aprendizado.
+                <p id="robotica2_p">
+                    Os participantes são encorajados a criar um carrinho controlado por Bluetooth, com a orientação da
+                    nossa
+                    equipe, para colaborar na construção de forma criativa. Essa atividade não apenas proporciona
+                    aprendizado prático em engenharia e tecnologia, mas também fomenta um ambiente de competição
+                    saudável e
+                    o orgulho de ver o fruto do esforço em equipe.
                 </p>
             </div>
 
             <div class="right">
-                <img src="../images/recreacao_image.png" alt="recreacao" class="image">
+                <img src="../images/robotica.jfif" alt="Imagem de um carrinho controlado por Bluetooth" class="image">
                 <img src="../svg/red_spot.svg" alt="Mancha vermelha" class="asset">
             </div>
         </section>
 
         <section class="box_2">
             <div class="left">
-                <img src="../images/aniversario_tematico_image.png" alt="aniversario_tematico" class="image">
+                <img src="../images/terrario.jpeg" alt="Imagem de uma oficina de plantio" class="image">
                 <img src="../svg/orange_spot.svg" alt="Mancha laranja" class="asset">
             </div>
 
             <div class="right">
-                <h1>
+                <h1 id="terrario_h1">
                     Terrário
                 </h1>
 
-                <p>
-                    Você e seus pequenos poderão se divertir juntos enquanto aprendem a cuidar de plantas e criam um ambiente único e especial. Nossa oficina de terrários é uma oportunidade perfeita para estimular a criatividade, promover a conexão com a natureza e fortalecer os laços familiares. Venha se encantar com essa experiência enriquecedora e cheia de cores!
+                <p id="terrario_p">
+                    Você e seus pequenos poderão se divertir juntos enquanto aprendem a cuidar de plantas e criam um
+                    ambiente único e especial. Nossa oficina de terrários é uma oportunidade perfeita para estimular a
+                    criatividade, promover a conexão com a natureza e fortalecer os laços familiares. Venha se encantar
+                    com essa experiência enriquecedora e cheia de cores!
                 </p>
             </div>
         </section>
 
-    </main>
+        <!-- Fim do Conteúdo Principal -->
 
-    <!-- End of Content -->
+    </main>
 
     <footer>
         <div class="wrapper">
@@ -305,7 +370,19 @@
         </div>
     </footer>
 
-    <script src="../../js/main.js" defer></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../../backend/texts/textManager.js"></script>
+    <script src="../main.js" defer></script>
 </body>
 
 </html>

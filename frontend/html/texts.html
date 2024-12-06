@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Textos</title>
+    <link rel="shortcut icon" href="../assets/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar_footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <!-- Desktop Navbar -->
+
+    <header>
+        <div class="wrapper">
+
+            <nav class="desktop">
+
+                <div class="logo">
+                    <a href="../html/home.html">
+                        <img src="../svg/logo.svg" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="logo_2">
+                    <img src="../svg/logo_2.svg" alt="Logo">
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Eventos
+                            <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
+                        </a>
+
+                        <div class="dropdown-content">
+                            <a href="sociais.html">Sociais</a>
+                            <a href="corporativos.html">Corporativos</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="oficinas.html">Oficinas</a>
+                    </li>
+
+                    <li>
+                        <a href="saude.html">Saúde e Bem Estar</a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
+
+                <!-- Ícone de menu -->
+                <div class="menu" aria-label="Abrir menu">
+                    <img src="../svg/menu.svg" alt="Menu" id="menu-icon">
+                </div>
+            </nav>
+
+            <!-- Mobile Navbar -->
+
+            <nav class="mobile">
+                <img src="../svg/close-icon.svg" alt="Fechar" class="close-icon">
+
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Eventos
+                            <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sociais.html">Sociais</a>
+                            <a href="corporativos.html">Corporativos</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="oficinas.html">Oficinas</a>
+                    </li>
+
+                    <li>
+                        <a href="saude.html">Saúde e Bem Estar</a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Começo do Conteúdo Principal -->
+
+    <!-- Passatempo Eventos -->
+
+    <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <section class="title">
+            <h1>Painel de Textos</h1>
+        </section>
+
+        <!-- Home -->
+
+        <section class="title-edit">
+            <h1>Home</h1>
+        </section>
+
+        <section class="box_3" id="form-home">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="home_h1">
+                    O que é a Passatempo Eventos?
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="home_p">
+                    A Passatempo Eventos é composta por profissionais qualificados e dedicados. Essa diversidade de
+                    conhecimentos e habilidades nos permite oferecer um atendimento personalizado e eficiente. Além
+                    disso, a constante troca de experiências e a colaboração entre os membros da equipe enriquecem nosso
+                    ambiente de trabalho, garantindo um ambiente acolhedor e propício ao aprendizado. Muitos
+                    profissionais fizeram parte de um curso Recreatur que oferecemos em São Paulo, incentivando a
+                    liderança nos jovens e expandindo suas perspectivas de trabalho.
+                </p>
+
+                <div>
+                    <button type="submit" class="btn" id="saveText-home" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos Sociais -->
+
+        <section class="title-edit">
+            <h1>Sociais</h1>
+        </section>
+
+        <form class="box_3" id="form-recreacao">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="recreacao_h1">
+                    Recreacao
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="recreacao_p">
+                    Nossos serviços de recreação são altamente detalhados e personalizados para atender às necessidades
+                    de cada faixa etária. Desenvolvemos jogos, dinâmicas e atividades sob medida para o público do seu
+                    evento. Além disso, contamos com uma equipe de recreadores treinados e por proporcionar momentos de
+                    diversão e aprendizado para todas as idades. Nosso objetivo é garantir que cada participante se
+                    sinta acolhido e envolvido em experiências únicas e inesquecíveis.
+                </p>
+
+                <div>
+                    <button type="submit" class="btn" id="saveText-recreacao" style="display: flex;">Salvar
+                        Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-aniversario_tematico">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="aniversario_tematico_h1">
+                    Aniversário Temático
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="aniversario_tematico_p">
+                    Transforme o seu aniversário em um evento inesquecível! Oferecemos festas personalizadas, repletas
+                    de diversão, alegria e momentos especiais para todas as idades. Nosso espaço é ideal para festas
+                    temáticas, brincadeiras interativas e atividades criativas, garantindo que a diversão esteja sempre
+                    presente!
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-aniversario_tematico" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-programacao_ferias">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="programacao_ferias_h1">
+                    Programção de Férias - Condomínios e Clubes
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="programacao_ferias_p">
+                    Durante as férias, garantimos que as crianças e adolescentes do condomínio tenham uma agenda cheia
+                    de aventuras, aprendizado e muita diversão! Com uma programação diversificada, nossas atividades são
+                    projetadas para entreter, educar e desenvolver habilidades sociais e motoras de maneira lúdica.
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-programacao_ferias" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Eventos Corporativos -->
+
+        <section class="title-edit">
+            <h1>Corporativos</h1>
+        </section>
+
+        <form class="box_3" id="form-community_day">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="community_day_h1">
+                    Community Day
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="community_day_p">
+                    Uma iniciativa que incentiva os colaboradores de uma empresa a se engajarem em ações sociais em
+                    benefício da comunidade...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-community_day" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-game_2030">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="game_2030_h1">
+                    Game 2030
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="game_2030_p">
+                    Um jogo inovador desenvolvido especialmente para o ambiente empresarial...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-game_2030" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-kids_day">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="kids_day_h1">
+                    Kids Day
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="kids_day_p">
+                    Um evento anual para celebrar o dia das crianças na sua empresa...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-kids_day" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-leilao_tematico">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="leilao_tematico_h1">
+                    Leilão Temático
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="leilao_tematico_p">
+                    Os nossos leilões sempre acabam com um gosto de “quero mais”...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-leilao_tematico" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-robotica">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="robotica_h1">
+                    Robótica
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="robotica_p">
+                    O projeto STEAM visa unir conhecimentos de quatro áreas...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-robotica" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-space_room">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="space_room_h1">
+                    Space Room
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="space_room_p">
+                    O "Scape Room" é uma atividade estratégica e engajadora...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-space_room" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-teatro">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="teatro_h1">
+                    Teatro
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="teatro_p">
+                    Ferramenta criativa e interativa utilizada para melhorar a comunicação...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-teatro" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-sipat">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="sipat_h1">
+                    Sipat
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="sipat_p">
+                    Focado na conscientização dos colaboradores sobre a importância da saúde...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-sipat" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <section class="title-edit">
+            <h1>Oficinas</h1>
+        </section>
+
+        <form class="box_3" id="form-batalha_nerf">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="batalha_nerf_h1">
+                    Batalha Nerf
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="batalha_nerf_p">
+                    Promover a diversão, o exercício físico, o trabalho em equipe...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-batalha_nerf" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-bolhas_gigantes">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="bolhas_gigantes_h1">
+                    Bolhas Gigantes
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="bolhas_gigantes_p">
+                    Criar bolhas gigantes é uma atividade que encanta pessoas de todas as idades...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-bolhas_gigantes" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-catavento">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="catavento_h1">
+                    Catavento
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="catavento_p">
+                    Durante a oficina, as crianças terão a oportunidade de aprender sobre o funcionamento dos
+                    cataventos...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-catavento" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-culinaria">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="culinaria_h1">
+                    Culinária
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="culinaria_p">
+                    Elas poderão experimentar pratos deliciosos e se aventurar na cozinha...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-culinaria" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-pintura_tela">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="pintura_tela_h1">
+                    Pintura em tela
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="pintura_tela_p">
+                    Nossa oficina de pintura é um espaço acolhedor e inspirador...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-pintura_tela" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-pulseira_macrame">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="pulseira_macrame_h1">
+                    Pulseira Macramê
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="pulseira_macrame_p">
+                    Com diferentes cores de lã e um molde, podemos dar vida a uma pulseira única e cheia de
+                    significado...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-pulseira_macrame" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-slime">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="slime_h1">
+                    Slime
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="slime_p">
+                    A criatividade e diversão se encontram...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-slime" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-robotica2">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="robotica2_h1">
+                    Robótica
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="robotica2_p">
+                    Os participantes são encorajados a criar um carrinho controlado por Bluetooth...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-robotica2" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-terrario">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="terrario_h1">
+                    Terrário
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="terrario_p">
+                    Você e seus pequenos poderão se divertir juntos enquanto aprendem a cuidar de plantas...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-terrario" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <section class="title-edit">
+            <h1>Saúde e Bem Estar</h1>
+        </section>
+
+        <form class="box_3" id="form-clinicas_esportivas">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="clinicas_esportivas_h1">
+                    Clínicas Esportivas
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="clinicas_esportivas_p">
+                    Nossas Clínicas Esportivas são projetadas para introduzir crianças ao mundo dos esportes...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-clinicas_esportivas" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="box_3" id="form-estacao_fitness">
+            <div>
+                <h1 div class="edit-area" contenteditable="true" id="estacao_fitness_h1">
+                    Estação Fitness
+                </h1>
+
+                <p div class="edit-area" contenteditable="true" id="estacao_fitness_p">
+                    A Estação Fitness é um espaço completo para todas as idades...
+                </p>
+
+                <div>
+                    <button class="btn" id="saveText-estacao_fitness" style="display: flex;">Salvar Texto</button>
+                </div>
+            </div>
+        </form>
+
+    </main>
+
+    <!-- Fim do Conteúdo Principal -->
+
+    <footer>
+        <div class="wrapper">
+            <div class="social-media">
+                <a href="https://www.facebook.com/Passatempoedu/?ref=embed_page">
+                    <img src="../svg/facebook.svg" alt="facebook">
+                </a>
+
+                <a href="https://www.instagram.com/passatempoeducativo">
+                    <img src="../svg/instagram.svg" alt="instagram">
+                </a>
+
+                <a href="https://x.com/passatempoedu">
+                    <img src="../svg/x.svg" alt="x">
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCmjjEtnmVvDNJAkpQmU6gUA">
+                    <img src="../svg/youtube.svg" alt="youtube">
+                </a>
+            </div>
+
+            <p class="copyright">© 2024 Passatempo Educativo | Todos os Direitos Reservados</p>
+        </div>
+    </footer>
+
+    <script src="../../backend/texts/textEdit.js"></script>
+    <script src="../main.js" defer></script>
+</body>
+
+</html>

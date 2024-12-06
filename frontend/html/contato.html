@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficinas</title>
+    <title>Contato</title>
     <link rel="shortcut icon" href="../assets/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../css/navbar_footer.css">
     <link rel="stylesheet" href="../css/main.css">
+
 </head>
 
 <body>
@@ -65,6 +66,11 @@
                     <li>
                         <a href="login.html">Login</a>
                     </li>
+                    
+                    <li>
+                        <a href="texts.html" id="painelLink" style="display: none;">Painel</a>
+                    </li>
+                    
                 </ul>
 
                 <!-- Ícone de menu -->
@@ -74,50 +80,78 @@
             </nav>
 
         </div>
-        
-            <!-- Mobile Navbar -->
 
-            <nav class="mobile">
-                <img src="../svg/close-icon.svg" alt="Fechar" class="close-icon">
+        <!-- Mobile Navbar -->
 
-                <ul>
-                    <li>
-                        <a href="home.html">Home</a>
-                    </li>
-    
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Eventos
-                            <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="sociais.html">Sociais</a>
-                            <a href="corporativos.html">Corporativos</a>
-                        </div>
-                    </li>
-    
-                    <li>
-                        <a href="oficinas.html">Oficinas</a>
-                    </li>
-    
-                    <li>
-                        <a href="saude.html">Saúde e Bem Estar</a>
-                    </li>
-    
-                    <li>
-                        <a href="contato.html">Contato</a>
-                    </li>
-    
-                    <li>
-                        <a href="login.html">Login</a>
-                    </li>
-                </ul>
-            </nav>
+        <nav class="mobile">
+            <img src="../svg/close-icon.svg" alt="Fechar" class="close-icon">
+
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Eventos
+                        <img src="../svg/down_arrow.svg" class="arrow-icon" alt="Seta">
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="sociais.html">Sociais</a>
+                        <a href="corporativos.html">Corporativos</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="oficinas.html">Oficinas</a>
+                </li>
+
+                <li>
+                    <a href="saude.html">Saúde e Bem Estar</a>
+                </li>
+
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
 
     </header>
 
     <!-- Fim da Navbar -->
 
     <main class="wrapper">
+
+        <!-- Seção Daltonismo -->
+
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <select id="daltonismo">
+            <option value="">Padrão</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+
+        <!-- Começo do Conteúdo Principal -->
+
         <section>
             <div class="title">
                 <h1>
@@ -156,9 +190,9 @@
             </div>
         </section>
 
-    </main>
+        <!-- Fim do Conteúdo Principal -->
 
-    <!-- End of Content -->
+    </main>
 
     <footer>
         <div class="wrapper">
@@ -184,7 +218,18 @@
         </div>
     </footer>
 
-    <script src="../../js/main.js" defer></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../main.js" defer></script>
 </body>
 
 </html>
